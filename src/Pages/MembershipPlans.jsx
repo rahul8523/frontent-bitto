@@ -68,7 +68,7 @@ const MembershipPlans = () => {
         <>
             <div style={{ background:"#b27f4a", height:"160px", marginTop:"-161px" }}></div>
             <div className="membership-container py-5">
-                <h2 style={{ color: '#b27f4a' }} className="text-center membership-heading">llMembership Plans</h2>
+                <h2 style={{ color: '#b27f4a' }} className="text-center membership-heading">Membership Plans</h2>
                 <p className="membership-subtitle">Explore our various levels of industry engagement and benefit.</p>
                 <div className="membership-table">
                     <div className="membership-column">
