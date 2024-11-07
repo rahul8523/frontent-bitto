@@ -1,0 +1,214 @@
+/* src/MembershipPlans.css */
+
+.membership-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.membership-title {
+    font-size: 2em;
+    color: #b28455; /* Title color */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.membership-subtitle {
+    font-size: 1em;
+    color: #5a4d41;
+    margin-bottom: 30px;
+}
+
+.membership-table {
+    display: grid;
+    grid-template-columns:400px repeat(auto-fill,180px);
+    gap:0px;
+    background-color: #fffbf5;
+    border: 1px solid #b47f4b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.membership-column {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    border-right: 1px solid #b47f4b;
+}
+
+.membership-column:last-child {
+    border-right: none;
+}
+
+.membership-feature {
+    padding: 10px 0;
+    text-align: left;
+    color: #5a4d41;
+}
+
+.membership-plan-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: left;
+    color: #b28455;
+}
+
+.membership-fee {
+    font-size: 1.1em;
+    text-align: left;
+    font-weight: bold;
+    color: #5a4d41;
+}
+
+.checkmark {
+    color: #fff;
+    font-size: 12px;
+    background: #b47f4b;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .membership-table {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+.subscribe-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #b28455;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+/* Modal overlay with subtle background blur */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Centered modal box with smooth shadow */
+.modal-content {
+
+    background: #fffbf5 !important; 
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Transition effect for modal appearance */
+.modal-content {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+.modal-overlay.open .modal-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Form styling with spacing and input customization */
+.subscription-form input {
+    width: 100%;
+    margin: 12px 0;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border 0.3s ease;
+}
+
+.subscription-form input:focus {
+    outline: none;
+    border: 1px solid #b28455; /* Matching brand color */
+    box-shadow: 0 0 5px rgba(178, 132, 85, 0.5);
+}
+
+/* Submit button with hover effect */
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #b28455;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #9a6b42;
+}
+
+/* Close button for modal */
+.close-button {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    padding: 2px 7px;
+    background-color: #b28455;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    width: 30px;
+    height: 30px;
+}
+
+.close-button:hover {
+    background-color: #ccc;
+}
+
+/* Heading styling for modal */
+.modal-content h3 {
+    color: #b28455;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Smooth appearance for modal container */
+.modal-overlay,
+.modal-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Responsive form adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 20px;
+        width: 90%;
+    }
+}
