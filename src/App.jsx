@@ -12,6 +12,7 @@ import BitoPage from './Pages/BitoPage'
 import MembershipPlans from './Pages/MembershipPlans'
 
 
+
 const App = () => {
 
   
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/thank-you" element={<ThankYou/>} />
           <Route path="/bito" element={<BitoPage/>} />
           <Route path="/membership-plans" element={<MembershipPlans/>} />
+
           <Route component={<NotFound/>} /> {/* Catch-all for 404 */}
           
         </Routes>

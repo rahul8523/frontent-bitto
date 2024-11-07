@@ -5,10 +5,16 @@
     margin: 0 auto;
     padding: 20px;
     color: #3A3A3A;
-    background-color: #F9F7F5;
-    font-family: Arial, sans-serif;
 }
+.bg-challenges {
+    background-color: #F9F7F5;
 
+}
+li::marker {
+    color: #b27f4a;
+    padding: 27px;
+    font-size: 22px;
+}
 .title {
     text-align: center;
     font-size: 2rem;
@@ -44,6 +50,7 @@
 .challenges-list li {
     margin-bottom: 15px;
     color: black;
+    list-style: disc;
     font-family: 'Neulis';
 }
 
