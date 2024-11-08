@@ -13,7 +13,7 @@ const BitoDriving = () => {
             <Container className="industrial mt-4 py-4 member-container">
                 <Row>
                     <Col sm={12} md={6} lg={6}>
-                        <h2 style={{ color: '#b27f4a' }} className='pb-3 text-left membership-heading'>Driving Industrial Advocacy and Sustainable Growth</h2>
+                        <h2 style={{ color: '#b27f4a' }} className='pb-3 text-left membership-heading'>Driving Industrial and Sustainable Growth</h2>
                         <big className='ex2'>
                             The BITO Industries Association, a pivotal part of the Bihar International Trade Organization (BITO),
                             is committed to
