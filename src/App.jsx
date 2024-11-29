@@ -10,6 +10,7 @@ import ThankYou from './Components/modals/ThankYou'
 import NotFound from './Pages/NotFound'
 import BitoPage from './Pages/BitoPage'
 import MembershipPlans from './Pages/MembershipPlans'
+import BIA from './Pages/BIA'
 
 
 
@@ -22,6 +23,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/bia' element={<BIA />} />
           <Route path='/membership' exact element={<Membership/>}/>
           <Route path="/thank-you" element={<ThankYou/>} />
           <Route path="/bito" element={<BitoPage/>} />
