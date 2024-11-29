@@ -22,13 +22,13 @@ import biaIcon9 from "./bia-icon-9.png"
 import biaIcon10 from "./bia-icon-10.png"
 import biaIcon11 from "./bia-icon-11.png"
 import biaIcon12 from "./bia-icon-12.png"
-import biaObjective1 from "./bia-objective-1.png"
-import biaObjective2 from "./bia-objective-2.png"
-import biaObjective3 from "./bia-objective-3.png"
-import biaObjective4 from "./bia-objective-4.png"
+import biaObjective1 from "./bia-objective1.png"
+import biaObjective2 from "./bia-objective2.png"
+import biaObjective3 from "./bia-objective3.png"
+import biaObjective4 from "./bia-objective4.png"
 import biaVision from "./bia-vision.png"
 import biaMission from "./bia-mission.png"
+import biaQR from "./biaQR.png"
 
 
-
-export {biaAbout, biaActivity1, biaActivity2, biaActivity3, biaActivity4, biaActivity5, biaForward1, biaForward2, biaForward3, biaForward4, biaForward5, biaForward6, biaIcon1, biaIcon2, biaIcon3, biaIcon4, biaIcon5, biaIcon6, biaIcon7, biaIcon8, biaIcon9, biaIcon10, biaIcon11, biaIcon12, biaObjective1, biaObjective2, biaObjective3, biaObjective4, biaVision, biaMission}
+export {biaAbout, biaActivity1, biaActivity2, biaActivity3, biaActivity4, biaActivity5, biaForward1, biaForward2, biaForward3, biaForward4, biaForward5, biaForward6, biaIcon1, biaIcon2, biaIcon3, biaIcon4, biaIcon5, biaIcon6, biaIcon7, biaIcon8, biaIcon9, biaIcon10, biaIcon11, biaIcon12, biaObjective1, biaObjective2, biaObjective3, biaObjective4, biaVision, biaMission, biaQR}

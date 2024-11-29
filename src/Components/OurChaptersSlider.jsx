@@ -10,41 +10,34 @@ const OurChaptersSlider = () => {
     <>
       <div className="general-container d-none d-md-flex p-0">
         <input className="radio" type="radio" name="card" id="cardUn1o" />
-        <label className="content" htmlFor="cardUn1o" title="SINGAPORE">
+        <label className="content content1" htmlFor="cardUn1o" title="SINGAPORE">
           <h1 className="title-card">
-            <span className="marg-bott">SINGAPORE</span>
+            <span className="marg-bott">AFRICA</span>
           </h1>
         </label>
         <input className="radio" type="radio" name="card" id="cardDo1s" />
-        <label className="content" htmlFor="cardDo1s">
+        <label className="content content2" htmlFor="cardDo1s">
           <h1 className="title-card">
-            <span className="marg-bott">SYDNEY</span>
+            <span className="marg-bott">ASIA</span>
           </h1>
         </label>
 
         <input className="radio" type="radio" name="card" id="cardT1res" />
-        <label className="content" htmlFor="cardT1res">
+        <label className="content content3" htmlFor="cardT1res">
           <h1 className="title-card">
-            <span className="marg-bott">TOKYO</span>
+            <span className="marg-bott">EUROPE</span>
           </h1>
         </label>
         <input className="radio" type="radio" name="card" id="cardCua1tro" />
-        <label className="content" htmlFor="cardCua1tro">
+        <label className="content content4" htmlFor="cardCua1tro">
           <h1 className="title-card">
-            <span className="marg-bott">NEW YORK</span>
+            <span className="marg-bott">AMERICA</span>
           </h1>
         </label>
         <input className="radio" type="radio" name="card" id="cardU1k" />
-        <label className="content" htmlFor="cardU1k">
+        <label className="content content5" htmlFor="cardU1k">
           <h1 className="title-card">
-            <span className="marg-bott">LONDON</span>
-          </h1>
-        </label>
-
-        <input className="radio" type="radio" name="card" id="cardAu1s" />
-        <label className="content" htmlFor="cardAu1s">
-          <h1 className="title-card">
-            <span className="marg-bott">DUBAI</span>
+            <span className="marg-bott">AUSTRALIA</span>
           </h1>
         </label>
       </div>
@@ -67,19 +60,18 @@ const OurChaptersSlider = () => {
     <div className="row">
       <div className="col-lg-12 col-sm-2 p-0">
   <div className="general-container d-md-none">
-    <input className="radio" type="radio" name="card" id="cardUn1o" />
-    <label className="content" htmlFor="cardUn1o" title="SINGAPORE">
-      <h1 className="title-card">
-        <span className="marg-bott">SINGAPORE</span>
-      </h1>
-    </label>
-
-    <input className="radio" type="radio" name="card" id="cardDo1s" />
-    <label className="content" htmlFor="cardDo1s">
-      <h1 className="title-card">
-        <span className="marg-bott">SYDNEY</span>
-      </h1>
-    </label>
+  <input className="radio" type="radio" name="card" id="cardUn1o" />
+        <label className="content content1" htmlFor="cardUn1o" title="SINGAPORE">
+          <h1 className="title-card">
+            <span className="marg-bott">AFRICA</span>
+          </h1>
+        </label>
+        <input className="radio" type="radio" name="card" id="cardDo1s" />
+        <label className="content content2" htmlFor="cardDo1s">
+          <h1 className="title-card">
+            <span className="marg-bott">ASIA</span>
+          </h1>
+        </label>
     </div></div></div>
   </SwiperSlide>
 
@@ -89,18 +81,18 @@ const OurChaptersSlider = () => {
   <div className="general-container d-md-none">
    
 
-    <input className="radio" type="radio" name="card" id="cardT1res" />
-    <label className="content" htmlFor="cardT1res">
-      <h1 className="title-card">
-        <span className="marg-bott">TOKYO</span>
-      </h1>
-    </label>
-    <input className="radio" type="radio" name="card" id="cardCua1tro" />
-    <label className="content" htmlFor="cardCua1tro">
-      <h1 className="title-card">
-        <span className="marg-bott">NEW YORK</span>
-      </h1>
-    </label>
+  <input className="radio" type="radio" name="card" id="cardT1res" />
+        <label className="content content3" htmlFor="cardT1res">
+          <h1 className="title-card">
+            <span className="marg-bott">EUROPE</span>
+          </h1>
+        </label>
+        <input className="radio" type="radio" name="card" id="cardCua1tro" />
+        <label className="content content4" htmlFor="cardCua1tro">
+          <h1 className="title-card">
+            <span className="marg-bott">AMERICA</span>
+          </h1>
+        </label>
 
     </div></div></div>
   </SwiperSlide>
@@ -111,19 +103,12 @@ const OurChaptersSlider = () => {
   <div className="row">
       <div className="col-lg-12 col-sm-2 p-0">
   <div className="general-container d-md-none">
-    <input className="radio" type="radio" name="card" id="cardU1k" />
-    <label className="content" htmlFor="cardU1k">
-      <h1 className="title-card">
-        <span className="marg-bott">LONDON</span>
-      </h1>
-    </label>
-
-    <input className="radio" type="radio" name="card" id="cardAu1s" />
-    <label className="content" htmlFor="cardAu1s">
-      <h1 className="title-card">
-        <span className="marg-bott">DUBAI</span>
-      </h1>
-    </label></div></div></div>
+  <input className="radio" type="radio" name="card" id="cardU1k" />
+        <label className="content content5" htmlFor="cardU1k">
+          <h1 className="title-card">
+            <span className="marg-bott">AUSTRALIA</span>
+          </h1>
+        </label></div></div></div>
   </SwiperSlide>
 
 

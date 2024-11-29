@@ -277,11 +277,11 @@ const BIA = () => {
       </section>
 
       <section className="container py-3 py-md-5">
-        <div className="row">
-          <div className="col-12 col-md-6">
+        <div className="row pb-4 pb-md-1">
+          <div className="col-12 col-md-6 order-2 order-md-1">
             <img src={biaAbout} alt="" width="100%" />
           </div>
-          <div className="col-12 col-md-6 my-3 my-md-1">
+          <div className="col-12 col-md-6 my-3 my-md-1 order-1 order-md-2">
             <h3 className="biaHeading">About BIA</h3>
             <p>
               The BITO Industries Association is committed to creating
@@ -318,8 +318,8 @@ const BIA = () => {
           <div className="row">
             <div className="col-12 col-md-6">
               <div className="d-flex align-items-center gap-3 py-3">
-                <img src={biaVision} alt="" width={70} height={70} className="biaVisionMissionImg"/>
-                <h4 className="biaHeading">Vision</h4>
+                <img src={biaVision} alt="" width={70} height={70} className="biaVisionMissionImg" />
+                <h4 className="biaHeading m-0">Vision</h4>
               </div>
               <p>
                 To be catalyst for industrial excellence and sustainable
@@ -330,8 +330,8 @@ const BIA = () => {
             </div>
             <div className="col-12 col-md-6">
               <div className="d-flex align-items-center gap-3 py-3">
-                <img src={biaMission} alt="" width={70} height={70} className="biaVisionMissionImg"/>
-                <h4 className="biaHeading">Mission</h4>
+                <img src={biaMission} alt="" width={70} height={70} className="biaVisionMissionImg" />
+                <h4 className="biaHeading m-0">Mission</h4>
               </div>
               <p>
                 Create opportunities for market expansion, bridge gaps between
@@ -347,14 +347,17 @@ const BIA = () => {
         <h3 className="biaHeading">Our Objectives</h3>
         <div className="row my-4">
           {objectives.map((objective, index) => (
-            <div key={index} className="col-6 col-md-3 p-0 position-relative">
+            <div
+              key={index}
+              className="col-6 col-md-3 p-0 position-relative overflow-hidden"
+            >
               <img
                 src={objective.imgSrc}
                 alt={`Objective ${index + 1}`}
                 width="100%"
-                className="img-fluid"
+                height="100%"
               />
-              <div className="text-white position-absolute bottom-0 start-0 w-100 p-4">
+              <div className="overlay">
                 <p>
                   {objective.text.split("\n").map((line, i) => (
                     <div key={i}>{line}</div>
@@ -363,6 +366,7 @@ const BIA = () => {
               </div>
             </div>
           ))}
+
         </div>
       </section>
 
@@ -379,9 +383,8 @@ const BIA = () => {
                 return (
                   <div
                     key={index}
-                    className={`d-flex flex-wrap flex-md-nowrap col-12 ${
-                      isLastItemOdd ? "col-md-12" : "col-md-6"
-                    } py-4 gap-4 ${!isLastItem ? "biaBorderBottom" : ""}`}
+                    className={`d-flex flex-wrap flex-md-nowrap col-12 ${isLastItemOdd ? "col-md-12" : "col-md-6"
+                      } py-4 gap-4 ${!isLastItem ? "biaBorderBottom" : ""}`}
                   >
                     <img
                       src={activity.imgSrc}
@@ -389,9 +392,8 @@ const BIA = () => {
                       className="activityImg"
                     />
                     <div
-                      className={`keyActivityContent ${
-                        !isLastItem ? "" : "mw-100"
-                      }`}
+                      className={`keyActivityContent ${!isLastItem ? "" : "mw-100"
+                        }`}
                     >
                       <h4
                         dangerouslySetInnerHTML={{ __html: activity.title }}
@@ -414,14 +416,13 @@ const BIA = () => {
 
       <section className="container d-flex flex-column align-items-center py-5 biaPlans">
         <h4 className="biaHeading text-center">Membership Plans</h4>
-        <h6>Explore our various levels of industry engagement and benefit.</h6>
+        <h5 className="text-center">Explore our various levels of industry engagement and benefit.</h5>
         <div className="row mt-4 w-100 d-none d-md-flex">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`col-6 col-md-3 biaBorder biaMembershipCard ${
-                plan.isRecommended ? "recommended" : ""
-              }`}
+              className={`col-6 col-md-3 biaBorder biaMembershipCard ${plan.isRecommended ? "recommended" : ""
+                }`}
               style={{ position: "relative" }}
             >
               {plan.isRecommended && (
@@ -459,7 +460,7 @@ const BIA = () => {
           <MembershipPlansSlider plans={plans} />
         </div>
         <h4 className="mt-5 biaHeading text-center">Our Differentiator</h4>
-        <div className="d-flex flex-wrap justify-content-center gap-3 gap-md-4 mt-5">
+        <div className="d-flex flex-wrap justify-content-center gap-3 gap-md-4 mt-4">
           {differentiator.map((item, index) => (
             <div
               className={`d-flex flex-column align-items-center biaDifferentiator biaBorder text-wrap w-45 ${item?.class}`}
@@ -474,9 +475,9 @@ const BIA = () => {
         </div>
       </section>
       <div className="d-flex flex-column align-items-center">
-        <h4 className="biaHeading mb-5">Our Chapters</h4>
+        <h4 className="biaHeading mb-4">Our Chapters</h4>
         <div className="row w-100">
-        <OurChaptersSlider /></div>
+          <OurChaptersSlider /></div>
       </div>
 
       <section className="container d-flex flex-column align-items-center py-5">
