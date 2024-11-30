@@ -140,14 +140,14 @@ p {
 
 .overlay {
   position: absolute;
-  bottom: 0; 
+  bottom: 0;
   left: 0;
   right: 0;
   width: 100%;
   /* height: 30%;  */
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 70%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0) 75%);
   color: white;
-  opacity: 0; 
+  opacity: 0;
   transition: opacity 0.3s ease;
   padding: 1rem;
   box-sizing: border-box;
@@ -158,31 +158,41 @@ p {
 }
 
 .overlay p {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
   margin: 0;
   font-size: 16px;
   font-weight: 500;
+  transition: bottom 0.3s ease-out;
 }
-
+.position-relative:hover .overlay p {
+  bottom: 25px;
+}
 .overlay div {
   font-size: 16px;
   font-weight: 500;
 }
-.biaQR{
+
+.biaQR {
   min-width: 100px;
   max-width: 150px !important;
 }
 
 @media (min-width: 767px) {
-  .borderBottom{
+  .borderBottom {
     border-bottom: 1px solid #dbc1a5;
   }
-  .borderTop{
+
+  .borderTop {
     border-top: 1px solid #dbc1a5;
   }
-  .borderLeft{
+
+  .borderLeft {
     border-left: 1px solid #dbc1a5;
   }
-  .borderRight{
+
+  .borderRight {
     border-right: 1px solid #dbc1a5;
   }
 }
@@ -251,14 +261,17 @@ p {
     flex: 6;
     filter: grayscale(0) !important;
   }
-  .biaQR{
+
+  .biaQR {
     max-width: 200px !important;
     padding: 1rem;
   }
-  .quick-links li{
+
+  .quick-links li {
     font-size: 14px;
   }
-  .biaMembership .swiper-pagination{
+
+  .biaMembership .swiper-pagination {
     position: relative !important;
   }
 }
