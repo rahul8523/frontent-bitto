@@ -486,7 +486,7 @@ const BIA = () => {
           {forwardItems.map((item, index) => (
             <div
               key={index}
-              className="d-flex align-items-center col-12 col-md-6 py-2 py-md-3 gap-2 gap-md-4"
+              className="d-flex align-items-center align-items-md-start col-12 col-md-6 py-2 py-md-3 gap-2 gap-md-4"
             >
               <img
                 src={item.imgSrc}
