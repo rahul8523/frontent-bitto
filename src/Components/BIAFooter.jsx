@@ -38,12 +38,14 @@ const BIAFooter = () => {
           <Row className="address-email-div-footer">
             <Col className="" lg={3}>
               <div className="address-div">
-                <span>Address:</span>
+                <span>India Corporate office Address :-</span>
                 <p className="address-para">
-                  India Corporate office Address : - 173, 7th Floor, Tower A, Corenthum, Sector 62, Opp. Electronic City Metro Station, Noida-201309</p>
+                    173, 7th Floor, Tower A, Corenthum, Sector 62, Opp. Electronic City Metro Station, Noida-201309</p>
+                   <span> Phone :</span>
                 <p>
-                  Phone: 0120-4914498</p><p>
-                  Global Corporate Office Address: - 207 Kent Street, Sydney, NSW, 2000
+                  0120-4914498</p>
+                  <span> Global Corporate Office Address :-</span><p>
+                    207 Kent Street, Sydney, NSW, 2000
                 </p>
 
                 <p className="email">
@@ -94,24 +96,24 @@ const BIAFooter = () => {
                 <Col className="quick-Home w-50" sm={6}>
                   <div className="quick-links">
                     <p style={{ fontSize: '15px', fontWeight: '600' }}>Quick Links</p>
-                    <a style={{ textDecoration: 'none', color: 'black' }} href="/">Home</a>
-                    {/* <li>About</li> */}
+                    <li><a style={{ textDecoration: 'none', color: 'black' }} href="/">Home</a></li>
+                    <li>About</li>
                     <a style={{ textDecoration: 'none', color: 'black' }} href="https://bitoworld.in/old-site/history.php"><li>Our Work</li></a>
-                    <a style={{ textDecoration: 'none', color: 'black' }} href="https://bitoworld.in/old-site/BSIC.php"><li >BSIC</li></a>
-                    {/* <li>Chapter</li>
-                <li>Bihar Voice</li> */}
+                    {/* <a style={{ textDecoration: 'none', color: 'black' }} href="https://bitoworld.in/old-site/BSIC.php"><li >BSIC</li></a> */}
+                    <li>Chapter</li>
+                <li>Bihar Voice</li>
 
                   </div>
                 </Col>
 
                 <Col
                   className="w-50" sm={6}>
-                  <div className="quick-links-2">
-                    {/* <li>EOI for BIA</li> */}
-
+                  <div className="quick-links-2 quick-links">
+                    <li>EOI for BIA</li>
+                    <li>BSIC</li>
                     <Link style={{ textDecoration: 'none', color: 'black' }} to={'https://bitoworld.in/old-site/bitoashmita.php'}>Events</Link>
 
-                    {/* <li>Media</li> */}
+                    <li>Media</li>
                     <a style={{ textDecoration: 'none', color: 'black' }} href="https://bitoworld.in/old-site/career.php"><li>Job</li></a>
 
 
@@ -125,7 +127,7 @@ const BIAFooter = () => {
             </div>
             {/* MOBILE DEVELOPMENT END */}
             <Col className="mopbile-news" lg={1} sm={12}>
-            <img src={biaQR} alt="qr" width="100%"/>
+            <img src={biaQR} alt="qr" width="100%" className="biaQR"/>
             </Col>
             <Col className="mopbile-news" lg={4} sm={12}>
               <div className="newsletter-div">

@@ -17,7 +17,7 @@ const MembershipPlansSlider = ({ plans }) => {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper p-0"
+        className="mySwiper biaMembership p-0"
       >
         {plans.map((plan, index) => (
           <SwiperSlide key={index}>
@@ -45,7 +45,7 @@ const MembershipPlansSlider = ({ plans }) => {
                 </div>
               )}
 
-              <div className="text-center pt-5">
+              <div className={`${plan.isRecommended ? 'pt-5' : 'pt-3' }`}>
                 <h3>{plan.name}</h3>
                 <h4>
                   <sup>₹</sup>

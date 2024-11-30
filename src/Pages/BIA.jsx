@@ -306,7 +306,7 @@ const BIA = () => {
             >
               <img src={item.imgSrc} alt="" height={50} width={50} />
               <div className="text-center pt-2">
-                <p dangerouslySetInnerHTML={{ __html: item.text }} />
+                <p dangerouslySetInnerHTML={{ __html: item.text }} className="m-0" />
               </div>
             </div>
           ))}
@@ -468,7 +468,7 @@ const BIA = () => {
             >
               <img src={item.imgSrc} alt="" height={50} width={50} />
               <div className="text-center pt-2">
-                <p dangerouslySetInnerHTML={{ __html: item.text }} />
+                <p dangerouslySetInnerHTML={{ __html: item.text }} className="m-0" />
               </div>
             </div>
           ))}
@@ -486,7 +486,7 @@ const BIA = () => {
           {forwardItems.map((item, index) => (
             <div
               key={index}
-              className="d-flex col-12 col-md-6 py-2 py-md-3 gap-2 gap-md-4"
+              className="d-flex align-items-center col-12 col-md-6 py-2 py-md-3 gap-2 gap-md-4"
             >
               <img
                 src={item.imgSrc}
@@ -496,7 +496,7 @@ const BIA = () => {
                 width={200}
               />
               <div className="biaForwardContent">
-                <p>
+                <p className="m-0">
                   <b>
                     <span className="textBrown">{item.label}:</span>
                   </b>{" "}

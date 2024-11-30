@@ -74,8 +74,8 @@ p {
 }
 
 .activityImg {
-  width: 235px;
-  height: 300px;
+  width: 200px;
+  height: 250px;
 }
 
 .overlay {
@@ -170,7 +170,8 @@ p {
 
 @media (max-width: 767px) {
   .bia-img {
-    padding-bottom: 150px;
+    padding-bottom: 75px;
+    padding-top: 280px;
   }
 
   .bia-img h2 {
@@ -194,8 +195,8 @@ p {
 
   .biaDifferentiator {
     min-width: 45%;
-    width: 45%;
-    max-width: 45%;
+    width: 47%;
+    max-width: 47%;
     height: auto;
   }
 
@@ -230,5 +231,15 @@ p {
     transform: scale(1.05);
     flex: 6;
     filter: grayscale(0) !important;
+  }
+  .biaQR{
+    max-width: 200px !important;
+    padding: 1rem;
+  }
+  .quick-links li{
+    font-size: 14px;
+  }
+  .biaMembership .swiper-pagination{
+    position: relative !important;
   }
 }
