@@ -68,7 +68,7 @@ const BIAFooter = () => {
     <div style={{ backgroundColor: "#f5e0cb" }}>
       <Container>
         <Row>
-          <Col lg={2} className="logo-div">
+          <Col lg={2} className="logo-div pb-2">
             <Image className="footer-logo" src={FooterLogo} alt="footer-logo" />
           </Col>
 

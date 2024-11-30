@@ -33,6 +33,8 @@ import {
 import MembershipPlansSlider from "../Components/membershipPlansSlider";
 import OurChaptersSlider from "../Components/OurChaptersSlider";
 import "./bia.css";
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 const BIA = () => {
   const content = [
@@ -258,20 +260,50 @@ const BIA = () => {
     },
   ];
 
+  const [key, setKey] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setKey(prevKey => prevKey + 1);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+
   return (
     <div>
       {/* Home Banner */}
       <section className="h-75 bia-img">
         <div className="container">
-          <div className="">
-            <h2 className="text-white" style={{ fontSize: "72px" }}>
-              Welcome to the <br /> BITO Industries Association <br />{" "}
-              &#40;BIA&#41;
-            </h2>
-            <button className="px-4 py-2 btn btn-light mt-sm-5 border-button">
+          <div>
+            {/* Title with fade-in animation */}
+            <motion.h2
+              key={1}
+              className="text-white"
+              style={{ fontSize: "72px" }}
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              viewport={{ once: false, amount: 0.5 }}
+            >
+              Welcome to the <br /> BITO Industries Association <br /> &#40;BIA&#41;
+            </motion.h2>
+
+            {/* Button with slide-up effect */}
+            <motion.button
+              key={2}
+              className="px-4 py-2 btn btn-light mt-sm-5 border-button"
+              initial={{ y: 10, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+              viewport={{ once: false, amount: 0.5 }}
+            >
               Become a Member{" "}
               <i className="fa fa-arrow-right" aria-hidden="true"></i>
-            </button>
+            </motion.button>
           </div>
         </div>
       </section>
@@ -300,15 +332,19 @@ const BIA = () => {
         </div>
         <div className="d-flex flex-wrap justify-content-center gap-4 mt-md-5">
           {content.map((item, index) => (
-            <div
+            <motion.div
               className="d-flex flex-column align-items-center biaBorder biaBorderSize text-wrap"
               key={index}
+              initial={{ scale: 0.8 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false, amount: 0.5 }}
             >
               <img src={item.imgSrc} alt="" height={50} width={50} />
               <div className="text-center pt-2">
                 <p dangerouslySetInnerHTML={{ __html: item.text }} className="m-0" />
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>

@@ -179,6 +179,9 @@ p {
   max-width: 150px !important;
 }
 
+.biaForwardImg:hover{
+  box-shadow: 0px 4px 12px rgba(238, 238, 238, 0.81), 0px 0px 16px rgba(197, 195, 183, 0.81);
+}
 @media (min-width: 767px) {
   .borderBottom {
     border-bottom: 1px solid #dbc1a5;
