@@ -117,11 +117,12 @@ p {
   background: rgba(0, 0, 0, 0.5);
 }
 .becomeAMember{
-  background: white !important;
-  color: gray !important;
+  background: #b27f4a !important;
+  color: white !important;
+  border: none !important;
 }
 .becomeAMember:hover{
-  background-color: rgb(255, 250, 250) !important;
+  background-color: #c28b4f !important;
 }
 .biaSubFooter {
   font-size: 4rem;
@@ -174,6 +175,27 @@ p {
 .pricing h4,
 .address-email-div-footer span {
   font-family: "Neulis Sans Medium" !important;
+}
+
+.biaMembershipCard:hover .pricing-btn {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s 0s;
+}
+.pricing-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 7px 20px;
+  background-color: #a46a2d;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+  z-index: 2;
 }
 
 .keyActivityContent p {

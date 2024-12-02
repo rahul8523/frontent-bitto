@@ -9,6 +9,7 @@ import Twitter from "../assets/twitter.png";
 import Youtube from "../assets/youtube.png";
 import BIAModal from "./modals/BIAModal";
 import { useState } from "react";
+import BIACorporate from "./modals/BIACorporate";
 // import { biaQR } from "../assets/bia";
 
 const SocialLinks = () => (
@@ -48,33 +49,35 @@ const QuickLinks = ({ links }) => (
 );
 
 const BIAFooter = () => {
-    const [modalShow, setModalShow] = useState(false);
+  const [modalShow, setModalShow] = useState(false);
+  const [nextStepModal, setNextStepModal] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    country: "",
+    state: "",
+    email: "",
+    phone: "",
+    occupation: "",
+    cityPincode: "",
+    gender: "",
+    qualification: "",
+    compnayName: "",
+    industry: "",
+    countryCorporate: "",
+    stateCorporate: "",
+    corporateCity: "",
+  });
 
-    const [formData, setFormData] = useState({
-      name: "",
-      country: "",
-      state: "",
-      email: "",
-      phone: "",
-      occupation: "",
-      cityPincode: "",
-      gender: "",
-      qualification: "",
-      compnayName: "",
-      industry: "",
-      countryCorporate: "",
-      stateCorporate: "",
-      corporateCity: "",
-    });
-
-    const handleChange = (e) => {
-      const { name, value } = e.target;
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: value,
-      }));
-    };
-
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+  const handleFinalSubmit = async () => {
+    console.log(formData);
+  };
   const quickLinks1 = [
     { label: "Home", url: "/" },
     { label: "About" },
@@ -123,7 +126,7 @@ const BIAFooter = () => {
 
         {/* Address and Email */}
         <Row className="address-email-div-footer borderTop">
-          <Col lg={3}>
+          <Col lg={4}>
             <div className="address-div pe-2">
               <p className="address-para">
                 <span>India Corporate office Address :- </span>
@@ -188,7 +191,7 @@ const BIAFooter = () => {
           {/* </Col> */}
 
           {/* Newsletter */}
-          <Col lg={5} sm={12} className="mopbile-news">
+          <Col lg={4} sm={12} className="mopbile-news">
             <div className="mt-2">
               <h5>
                 <span>Newsletter</span>
@@ -204,21 +207,18 @@ const BIAFooter = () => {
                 />
                 <Button className="subs-btn">Subscribe</Button>
               </div>
-
+              <Button
+                className="px-4 py-1 mt-4 btn btn-light border-button becomeAMember"
+                onClick={() => setModalShow(true)}
+              >
+                Become a Member
+                <i className="fa fa-arrow-right" aria-hidden="true"></i>
+              </Button>
               <div className="social-footer mt-3">
-                <h5 className="mb-0 mt-4">
+                <h5 className=" mt-4">
                   <span>Social Links</span>
                 </h5>
-                <div className="d-flex flex-wrap gap-2 align-items-center">
-                  <SocialLinks />
-                  <Button
-                    className="px-4 py-2 btn btn-light border-button becomeAMember"
-                    onClick={() => setModalShow(true)}
-                  >
-                    Become a Member
-                    <i className="fa fa-arrow-right" aria-hidden="true"></i>
-                  </Button>
-                </div>
+                <SocialLinks />
               </div>
             </div>
           </Col>
@@ -237,10 +237,18 @@ const BIAFooter = () => {
 
       <BIAModal
         show={modalShow}
+        setNextStepModal={setNextStepModal}
         onHide={() => setModalShow(false)}
         setModalShow={setModalShow}
         formData={formData}
         handleChange={handleChange}
+      />
+      <BIACorporate
+        show={nextStepModal}
+        onHide={() => setNextStepModal(false)}
+        formData={formData}
+        handleChange={handleChange}
+        finalSubmit={handleFinalSubmit}
       />
     </div>
   );

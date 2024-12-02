@@ -31,40 +31,43 @@ import {
   biaVision,
 } from "../assets/bia";
 import MembershipPlansSlider from "../Components/membershipPlansSlider";
+import BIACorporate from "../Components/modals/BIACorporate";
 import BIAModal from "../Components/modals/BIAModal";
 import OurChaptersSlider from "../Components/OurChaptersSlider";
 import "./bia.css";
-import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const BIA = () => {
   const [modalShow, setModalShow] = useState(false);
+  const [nextStepModal, setNextStepModal] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    country: "",
+    state: "",
+    email: "",
+    phone: "",
+    occupation: "",
+    cityPincode: "",
+    gender: "",
+    qualification: "",
+    compnayName: "",
+    industry: "",
+    countryCorporate: "",
+    stateCorporate: "",
+    corporateCity: "",
+  });
 
-    const [formData, setFormData] = useState({
-      name: "",
-      country: "",
-      state: "",
-      email: "",
-      phone: "",
-      occupation: "",
-      cityPincode: "",
-      gender: "",
-      qualification: "",
-      compnayName: "",
-      industry: "",
-      countryCorporate: "",
-      stateCorporate: "",
-      corporateCity: "",
-    });
-
-    const handleChange = (e) => {
-      const { name, value } = e.target;
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: value,
-      }));
-    };
-
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+const handleFinalSubmit = async () => {
+  console.log(formData);
+};
   const content = [
     { imgSrc: biaIcon1, text: "Business Connects & <br> Meets" },
     { imgSrc: biaIcon2, text: "Market & product <br> Acces" },
@@ -293,14 +296,13 @@ const BIA = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setKey(prevKey => prevKey + 1);
+      setKey((prevKey) => prevKey + 1);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
 
   return (
     <div>
@@ -524,7 +526,7 @@ const BIA = () => {
               )}
 
               <div className="text-center pt-5 pricing">
-                <h3>{plan.name}</h3>
+                <h3 className="mb-0">{plan.name}</h3>
                 <h4>
                   <sup>₹</sup>
                   <span>{plan.price}</span> /yearly
@@ -535,6 +537,7 @@ const BIA = () => {
                   <li key={idx}>{feature}</li>
                 ))}
               </ul>
+              <button className="pricing-btn">Get Started</button>
             </div>
           ))}
         </div>
@@ -613,10 +616,18 @@ const BIA = () => {
 
       <BIAModal
         show={modalShow}
+        setNextStepModal={setNextStepModal}
         onHide={() => setModalShow(false)}
         setModalShow={setModalShow}
         formData={formData}
         handleChange={handleChange}
+      />
+      <BIACorporate
+        show={nextStepModal}
+        onHide={() => setNextStepModal(false)}
+        formData={formData}
+        handleChange={handleChange}
+        finalSubmit={handleFinalSubmit}
       />
     </div>
   );

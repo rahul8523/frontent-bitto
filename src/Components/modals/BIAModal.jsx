@@ -4,15 +4,11 @@ import { Button, Form, Modal } from "react-bootstrap";
 import { Country, State } from "country-state-city";
 
 const BIAModal = ({
-  formData,
-  handleChange,
-  setModalShow,
   ...props
 }) => {
   const [countries, setCountries] = useState([]);
   const [states, setStates] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
+console.log(props)
   useEffect(() => {
     const countryList = Country.getAllCountries();
     setCountries(countryList);
@@ -22,28 +18,17 @@ const BIAModal = ({
     const selectedCountryCode = e.target.value;
     const stateList = State.getStatesOfCountry(selectedCountryCode);
     setStates(stateList || []);
-    handleChange(e);
-  };
-
-  const handleSubmit = async (e) => {
-     e.preventDefault(); 
-    setIsLoading(true);
-    handleBeforeClose(e);
-    try {
-      console.log(formData)
-    // eslint-disable-next-line no-unused-vars
-    } catch (error) {
-      console.log("error")
-    } finally {
-      setIsLoading(false);
-    }
+    props.handleChange(e);
   };
 
   const handleBeforeClose = (e) => {
+    e.preventDefault(); 
+
     if (e.target.closest("form").checkValidity()) {
-      setModalShow(false);
+      props.setModalShow(false)
+      props.setNextStepModal(true); 
     } else {
-      e.target.closest("form").reportValidity(); // Trigger validation UI feedback
+      e.target.closest("form").reportValidity();
     }
   };
 
@@ -64,8 +49,8 @@ const BIAModal = ({
               type="text"
               placeholder="Enter Full Name"
               name="name"
-              value={formData.name}
-              onChange={handleChange}
+              value={props.formData.name}
+              onChange={props.handleChange}
               required
             />
           </Form.Group>
@@ -74,7 +59,7 @@ const BIAModal = ({
             <Form.Control
               as="select"
               name="country"
-              value={formData.country}
+              value={props.formData.country}
               onChange={handleCountryChange}
               required
             >
@@ -91,10 +76,10 @@ const BIAModal = ({
             <Form.Control
               as="select"
               name="state"
-              value={formData.state}
-              onChange={handleChange}
+              value={props.formData.state}
+              onChange={props.handleChange}
               required
-              disabled={!formData.country}
+              disabled={!props.formData.country}
             >
               <option value="">Select State</option>
               {states.map((state) => (
@@ -110,8 +95,8 @@ const BIAModal = ({
               type="email"
               placeholder="example@gmail.com"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
+              value={props.formData.email}
+              onChange={props.handleChange}
               required
             />
           </Form.Group>
@@ -121,8 +106,8 @@ const BIAModal = ({
               type="tel"
               placeholder="Enter Phone Number"
               name="phone"
-              value={formData.phone}
-              onChange={handleChange}
+              value={props.formData.phone}
+              onChange={props.handleChange}
               minLength={7}
               maxLength={15}
               required
@@ -134,8 +119,8 @@ const BIAModal = ({
               type="text"
               placeholder="Enter Occupation"
               name="occupation"
-              value={formData.occupation}
-              onChange={handleChange}
+              value={props.formData.occupation}
+              onChange={props.handleChange}
               required
             />
           </Form.Group>
@@ -144,11 +129,9 @@ const BIAModal = ({
             style={{ width: "40%", margin: "0 auto" }}
             variant="primary"
             className="section-3-btn my-2"
-            onClick={handleSubmit}
-            disabled={isLoading}
-            // onClick={handleBeforeClose}
+            onClick={handleBeforeClose}
           >
-            {isLoading ? "Submitting..." : "Submit"}
+            Next
           </Button>
         </Form>
       </Modal.Body>

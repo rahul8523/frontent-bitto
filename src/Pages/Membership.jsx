@@ -92,7 +92,7 @@ const Membership = () => {
       <h2 className="main-banner-heading-membership pt-3 m-0 text-white">
         <span>BITO</span> Membership</h2>
             <button onClick={() => setModalShow(true)} className="px-4 py-2 btn btn-light mt-sm-5 border-button">
-              Enroll Now <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              Enroll Now <i className="fa fa-arrow-right" aria-hidden="true"></i>
             </button>
             <Modal1 show={modalShow}
                     onHide={() => setModalShow(false)}
