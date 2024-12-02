@@ -308,13 +308,13 @@ const handleFinalSubmit = async () => {
   return (
     <div>
       {/* Home Banner */}
-      <section className="h-75 bia-img">
+      <section className="bia-img">
         <div className="container">
           <div>
             {/* Title with fade-in animation */}
             <motion.h2
               key={1}
-              className="text-white bannerHeading"
+              className="text-white bannerHeading mt-5"
               style={{ fontSize: "68px" }}
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -324,20 +324,6 @@ const handleFinalSubmit = async () => {
               Welcome to the <br /> BITO Industries Association <br />{" "}
               &#40;BIA&#41;
             </motion.h2>
-
-            {/* Button with slide-up effect */}
-            <motion.button
-              key={2}
-              className="px-4 py-2 btn btn-light mt-sm-5 border-button"
-              initial={{ y: 10, opacity: 0.8 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 0, ease: "easeInOut" }}
-              viewport={{ once: false, amount: 0.5 }}
-              onClick={() => setModalShow(true)}
-            >
-              <strong className="bannerCTA">BECOME A MEMBER</strong>
-              <i className="fa fa-arrow-right" aria-hidden="true"></i>
-            </motion.button>
           </div>
         </div>
       </section>
@@ -533,13 +519,14 @@ const handleFinalSubmit = async () => {
                   <span>{plan.price}</span> /yearly
                 </h4>
               </div>
-              {plan.redText && 
-              <div className="text-danger text-center">
-                <strong>
-                  <del>₹ 25,000</del>
-                </strong>
-                <sub>/mo</sub>
-              </div>}
+              {plan.redText && (
+                <div className="text-danger text-center">
+                  <strong>
+                    <del>₹ 25,000</del>
+                  </strong>
+                  <sub>/mo</sub>
+                </div>
+              )}
               <ul className="p-2 p-md-4">
                 {plan.features.map((feature, idx) => (
                   <li key={idx}>{feature}</li>
@@ -552,6 +539,15 @@ const handleFinalSubmit = async () => {
         <div className="row mt-4 w-100 d-block d-md-none">
           <MembershipPlansSlider plans={plans} />
         </div>
+
+        <button
+          key={2}
+          className="px-4 py-2 btn btn-light mt-sm-5 border-button becomeAMember"
+          onClick={() => setModalShow(true)}
+        >
+          <strong className="bannerCTA">BECOME A MEMBER</strong>
+          <i className="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
         <h4 className="mt-5 biaHeading text-center">Our Differentiator</h4>
         <div className="d-flex flex-wrap justify-content-center gap-3 gap-md-4 mt-4">
           {differentiator.map((item, index) => (

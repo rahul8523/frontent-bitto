@@ -53,6 +53,7 @@ p {
   padding-top: 235px;
   padding-bottom: 165px;
   margin-top: -170px;
+  height: calc(75vh + 170px);
 }
 
 .biaHeading {
@@ -299,11 +300,11 @@ p {
   .bia-img {
     padding-bottom: 75px;
     padding-top: 280px;
+    height: calc(87vh + 170px);
   }
 
   .bia-img h2 {
     font-size: 4rem !important;
-    margin-bottom: 3rem;
   }
 .biaMembershipCard:hover{
   transform: scale(1);
