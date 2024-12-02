@@ -31,12 +31,40 @@ import {
   biaVision,
 } from "../assets/bia";
 import MembershipPlansSlider from "../Components/membershipPlansSlider";
+import BIAModal from "../Components/modals/BIAModal";
 import OurChaptersSlider from "../Components/OurChaptersSlider";
 import "./bia.css";
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
 const BIA = () => {
+  const [modalShow, setModalShow] = useState(false);
+
+    const [formData, setFormData] = useState({
+      name: "",
+      country: "",
+      state: "",
+      email: "",
+      phone: "",
+      occupation: "",
+      cityPincode: "",
+      gender: "",
+      qualification: "",
+      compnayName: "",
+      industry: "",
+      countryCorporate: "",
+      stateCorporate: "",
+      corporateCity: "",
+    });
+
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    };
+
   const content = [
     { imgSrc: biaIcon1, text: "Business Connects & <br> Meets" },
     { imgSrc: biaIcon2, text: "Market & product <br> Acces" },
@@ -260,6 +288,7 @@ const BIA = () => {
     },
   ];
 
+  // eslint-disable-next-line no-unused-vars
   const [key, setKey] = useState(0);
 
   useEffect(() => {
@@ -282,26 +311,28 @@ const BIA = () => {
             {/* Title with fade-in animation */}
             <motion.h2
               key={1}
-              className="text-white"
-              style={{ fontSize: "72px" }}
+              className="text-white bannerHeading"
+              style={{ fontSize: "68px" }}
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.5 }}
             >
-              Welcome to the <br /> BITO Industries Association <br /> &#40;BIA&#41;
+              Welcome to the <br /> BITO Industries Association <br />{" "}
+              &#40;BIA&#41;
             </motion.h2>
 
             {/* Button with slide-up effect */}
             <motion.button
               key={2}
               className="px-4 py-2 btn btn-light mt-sm-5 border-button"
-              initial={{ y: 10, opacity: 0 }}
+              initial={{ y: 10, opacity: 0.8 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+              transition={{ duration: 1, delay: 0, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.5 }}
+              onClick={() => setModalShow(true)}
             >
-              Become a Member{" "}
+              <strong className="bannerCTA">BECOME A MEMBER</strong>
               <i className="fa fa-arrow-right" aria-hidden="true"></i>
             </motion.button>
           </div>
@@ -332,19 +363,18 @@ const BIA = () => {
         </div>
         <div className="d-flex flex-wrap justify-content-center gap-4 mt-md-5">
           {content.map((item, index) => (
-            <motion.div
+            <div
               className="d-flex flex-column align-items-center biaBorder biaBorderSize text-wrap"
               key={index}
-              initial={{ scale: 0.8 }}
-              whileInView={{ scale: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: false, amount: 0.5 }}
             >
               <img src={item.imgSrc} alt="" height={50} width={50} />
               <div className="text-center pt-2">
-                <p dangerouslySetInnerHTML={{ __html: item.text }} className="m-0" />
+                <p
+                  dangerouslySetInnerHTML={{ __html: item.text }}
+                  className="m-0"
+                />
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>
@@ -354,7 +384,13 @@ const BIA = () => {
           <div className="row">
             <div className="col-12 col-md-6">
               <div className="d-flex align-items-center gap-3 py-3">
-                <img src={biaVision} alt="" width={70} height={70} className="biaVisionMissionImg" />
+                <img
+                  src={biaVision}
+                  alt=""
+                  width={70}
+                  height={70}
+                  className="biaVisionMissionImg"
+                />
                 <h4 className="biaHeading m-0">Vision</h4>
               </div>
               <p>
@@ -366,7 +402,13 @@ const BIA = () => {
             </div>
             <div className="col-12 col-md-6">
               <div className="d-flex align-items-center gap-3 py-3">
-                <img src={biaMission} alt="" width={70} height={70} className="biaVisionMissionImg" />
+                <img
+                  src={biaMission}
+                  alt=""
+                  width={70}
+                  height={70}
+                  className="biaVisionMissionImg"
+                />
                 <h4 className="biaHeading m-0">Mission</h4>
               </div>
               <p>
@@ -402,7 +444,6 @@ const BIA = () => {
               </div>
             </div>
           ))}
-
         </div>
       </section>
 
@@ -419,8 +460,9 @@ const BIA = () => {
                 return (
                   <div
                     key={index}
-                    className={`d-flex flex-wrap flex-md-nowrap col-12 ${isLastItemOdd ? "col-md-12" : "col-md-6"
-                      } py-4 gap-4 ${!isLastItem ? "biaBorderBottom" : ""}`}
+                    className={`d-flex flex-wrap flex-md-nowrap col-12 ${
+                      isLastItemOdd ? "col-md-12" : "col-md-6"
+                    } py-4 gap-4 ${!isLastItem ? "biaBorderBottom" : ""}`}
                   >
                     <img
                       src={activity.imgSrc}
@@ -428,8 +470,9 @@ const BIA = () => {
                       className="activityImg"
                     />
                     <div
-                      className={`keyActivityContent ${!isLastItem ? "" : "mw-100"
-                        }`}
+                      className={`keyActivityContent ${
+                        !isLastItem ? "" : "mw-100"
+                      }`}
                     >
                       <h4
                         dangerouslySetInnerHTML={{ __html: activity.title }}
@@ -452,13 +495,16 @@ const BIA = () => {
 
       <section className="container d-flex flex-column align-items-center py-5 biaPlans">
         <h4 className="biaHeading text-center">Membership Plans</h4>
-        <h5 className="text-center">Explore our various levels of industry engagement and benefit.</h5>
+        <h5 className="text-center">
+          Explore our various levels of industry engagement and benefit.
+        </h5>
         <div className="row mt-4 w-100 d-none d-md-flex">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`col-6 col-md-3 biaBorder biaMembershipCard ${plan.isRecommended ? "recommended" : ""
-                }`}
+              className={`col-6 col-md-3 biaBorder biaMembershipCard ${
+                plan.isRecommended ? "recommended" : ""
+              }`}
               style={{ position: "relative" }}
             >
               {plan.isRecommended && (
@@ -477,7 +523,7 @@ const BIA = () => {
                 </div>
               )}
 
-              <div className="text-center pt-5">
+              <div className="text-center pt-5 pricing">
                 <h3>{plan.name}</h3>
                 <h4>
                   <sup>₹</sup>
@@ -504,7 +550,10 @@ const BIA = () => {
             >
               <img src={item.imgSrc} alt="" height={50} width={50} />
               <div className="text-center pt-2">
-                <p dangerouslySetInnerHTML={{ __html: item.text }} className="m-0" />
+                <p
+                  dangerouslySetInnerHTML={{ __html: item.text }}
+                  className="m-0"
+                />
               </div>
             </div>
           ))}
@@ -513,7 +562,8 @@ const BIA = () => {
       <div className="d-flex flex-column align-items-center">
         <h4 className="biaHeading mb-4">Our Chapters</h4>
         <div className="row w-100">
-          <OurChaptersSlider /></div>
+          <OurChaptersSlider />
+        </div>
       </div>
 
       <section className="container d-flex flex-column align-items-center py-5">
@@ -560,6 +610,14 @@ const BIA = () => {
           </p>
         </div>
       </section>
+
+      <BIAModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        setModalShow={setModalShow}
+        formData={formData}
+        handleChange={handleChange}
+      />
     </div>
   );
 };

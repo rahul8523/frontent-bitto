@@ -45,7 +45,7 @@ const MembershipPlansSlider = ({ plans }) => {
                 </div>
               )}
 
-              <div className={`${plan.isRecommended ? 'pt-5' : 'pt-3' }`}>
+              <div className={`pricing ${plan.isRecommended ? 'pt-5' : 'pt-3' }`}>
                 <h3>{plan.name}</h3>
                 <h4>
                   <sup>₹</sup>

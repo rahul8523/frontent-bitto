@@ -1,14 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@font-face {
+  font-family: "Bebas Neue Pro";
+  src: url("../assets/font/BebasNeueProBold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bebas Neue Pro Regular";
+  src: url("../assets/font/BebasNeueProRegular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neulis Sans Medium";
+  src: url("../assets/font/fonnts.com-Neulis_Sans_Medium.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neulis Sans Regular";
+  src: url("../assets/font/fonnts.com-Neulis_Sans_Regular.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Bebas Neue", serif !important;
+  font-family: "Bebas Neue Pro", serif !important;
 }
 
+.bannerHeading {
+  font-family: "Bebas Neue Pro Regular", serif !important;
+  letter-spacing: -1px;
+}
+.bannerCTA {
+  font-size: 12px;
+  font-weight: 700;
+}
 p {
   font-size: 14px !important;
 }
@@ -18,14 +50,15 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 235px 0;
+  padding-top: 235px;
+  padding-bottom: 165px;
   margin-top: -170px;
 }
 
 .biaHeading {
   font-size: 4rem;
   font-weight: 400;
-  color: #b27f4a;
+  color: #c58c4e;
 }
 
 .biaBorder {
@@ -48,7 +81,6 @@ p {
   /* flex: 1 1 200px;  */
   min-width: 200px;
   max-width: 350px;
-
 }
 
 .biaForwardContent {
@@ -76,12 +108,21 @@ p {
 .activityImg {
   width: 200px;
   height: 250px;
+  transition: all 0.5s ease-in-out;
 }
-
+.activityImg:hover {
+  transform: scale(1.03);
+}
 .overlay {
   background: rgba(0, 0, 0, 0.5);
 }
-
+.becomeAMember{
+  background: white !important;
+  color: gray !important;
+}
+.becomeAMember:hover{
+  background-color: rgb(255, 250, 250) !important;
+}
 .biaSubFooter {
   font-size: 4rem;
   line-height: 1;
@@ -94,19 +135,25 @@ p {
 }
 
 .recommended {
-  box-shadow: 0px 4px 12px rgb(212 212 212 / 49%), 0px 0px 16px rgb(194 194 194 / 61%);
+  box-shadow: 0px 4px 12px rgb(212 212 212 / 49%),
+    0px 0px 16px rgb(194 194 194 / 61%);
 }
 
 .biaMembershipCard {
   background-color: #fffbf4;
+  transition: all 0.5s ease-in-out;
 }
-
+.biaMembershipCard:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
 .biaMembershipCard h3,
-.biaMembershipCard h4>span {
-  font-size: 3rem;
+.biaMembershipCard h4 > span {
+  font-size: 2.5rem;
 }
 
-.biaMembershipCard h4>sup {
+.biaMembershipCard h4 > sup {
   font-size: 2rem;
 }
 
@@ -114,29 +161,47 @@ p {
   max-width: 300px;
   line-height: 1.5;
 }
+.keyActivityContent h4,
+.biaPlans h5,
+.pricing h3,
+.pricing h4 {
+  letter-spacing: -1px;
+}
+.keyActivityContent h4,
+.keyActivityContent span,
+.biaPlans h5,
+.pricing h3,
+.pricing h4,
+.address-email-div-footer span {
+  font-family: "Neulis Sans Medium" !important;
+}
 
+.keyActivityContent p {
+  font-family: "Neulis Sans Regular" !important;
+}
 .content1 {
-  background-image: url('../assets/bia/Africa.png') !important;
+  background-image: url("../assets/bia/Africa.png") !important;
 }
 
 .content2 {
-  background-image: url('../assets/bia/Asia.jpeg') !important;
+  background-image: url("../assets/bia/Asia.jpeg") !important;
 }
 
 .content3 {
-  background-image: url('../assets/bia/Europe.png') !important;
+  background-image: url("../assets/bia/Europe.png") !important;
 }
 
 .content4 {
-  background-image: url('../assets/bia/America.png') !important;
+  background-image: url("../assets/bia/America.png") !important;
 }
 
 .content5 {
-  background-image: url('../assets/bia/Australia.png') !important;
+  background-image: url("../assets/bia/Australia.png") !important;
 }
 
-
-
+.social-icons a {
+  margin: 0 4px;
+}
 
 .overlay {
   position: absolute;
@@ -145,7 +210,11 @@ p {
   right: 0;
   width: 100%;
   /* height: 30%;  */
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0) 75%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0) 75%
+  );
   color: white;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -179,24 +248,25 @@ p {
   max-width: 150px !important;
 }
 
-.biaForwardImg:hover{
-  box-shadow: 0px 4px 12px rgba(238, 238, 238, 0.81), 0px 0px 16px rgba(197, 195, 183, 0.81);
+.biaForwardImg:hover {
+  box-shadow: 0px 4px 12px rgba(238, 238, 238, 0.81),
+    0px 0px 16px rgba(197, 195, 183, 0.81);
 }
 @media (min-width: 767px) {
   .borderBottom {
-    border-bottom: 1px solid #dbc1a5;
+    border-bottom: 1px solid #c19363;
   }
 
   .borderTop {
-    border-top: 1px solid #dbc1a5;
+    border-top: 1px solid #c19363;
   }
 
   .borderLeft {
-    border-left: 1px solid #dbc1a5;
+    border-left: 1px solid #c19363;
   }
 
   .borderRight {
-    border-right: 1px solid #dbc1a5;
+    border-right: 1px solid #c19363;
   }
 }
 
@@ -253,7 +323,6 @@ p {
     width: 100%;
     height: 300px;
   }
-
   .biaBorder {
     padding: 15px;
   }
@@ -277,4 +346,17 @@ p {
   .biaMembership .swiper-pagination {
     position: relative !important;
   }
+  .biaMembershipCard h3,
+.biaMembershipCard h4 > span {
+  font-size: 2rem;
+}
+.biaMembershipCard h4 > sup{
+  font-size: 1.5rem;
+}
+.social-links-img{
+  width: 70% !important;
+}
+.social-icons a{
+      margin: 0 10px;
+}
 }
