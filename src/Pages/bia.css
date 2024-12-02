@@ -302,7 +302,9 @@ p {
     font-size: 4rem !important;
     margin-bottom: 3rem;
   }
-
+.biaMembershipCard:hover{
+  transform: scale(1);
+}
   .w-45 {
     width: 45%;
   }

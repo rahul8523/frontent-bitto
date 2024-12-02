@@ -239,6 +239,7 @@ const handleFinalSubmit = async () => {
         "-",
         "-",
       ],
+      redText: true
     },
     {
       name: "Silver",
@@ -532,6 +533,13 @@ const handleFinalSubmit = async () => {
                   <span>{plan.price}</span> /yearly
                 </h4>
               </div>
+              {plan.redText && 
+              <div className="text-danger text-center">
+                <strong>
+                  <del>₹ 25,000</del>
+                </strong>
+                <sub>/mo</sub>
+              </div>}
               <ul className="p-2 p-md-4">
                 {plan.features.map((feature, idx) => (
                   <li key={idx}>{feature}</li>
