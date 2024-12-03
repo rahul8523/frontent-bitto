@@ -36,7 +36,7 @@ import BIAModal from "../Components/modals/BIAModal";
 import OurChaptersSlider from "../Components/OurChaptersSlider";
 import "./bia.css";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const BIA = () => {
   const [modalShow, setModalShow] = useState(false);
@@ -284,15 +284,22 @@ const BIA = () => {
   // eslint-disable-next-line no-unused-vars
   const [key, setKey] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setKey((prevKey) => prevKey + 1);
-    };
+const membershipRef = useRef(null);
 
-    window.addEventListener("scroll", handleScroll);
+// Function to scroll to the pricing section
+const scrollToPricing = () => {
+  if (membershipRef.current) {
+    membershipRef.current.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+// Scroll to the section if there's a hash in the URL (i.e., `#pricing`)
+useEffect(() => {
+  if (window.location.hash === "#membership" && membershipRef.current) {
+    console.log('hi')
+    membershipRef.current.scrollIntoView({ behavior: "smooth" });
+  }
+}, []);
 
   return (
     <div>
@@ -471,8 +478,10 @@ const BIA = () => {
         </div>
       </section>
 
-      <section className="container d-flex flex-column align-items-center py-5 biaPlans">
-        <div id="membership-plans" className="w-100">
+      <section
+        className="container d-flex flex-column align-items-center py-5 biaPlans"
+        id="membership"
+      >
           <h4 className="biaHeading text-center">Membership Plans</h4>
           <h5 className="text-center">
             Explore our various levels of industry engagement and benefit.
@@ -530,7 +539,7 @@ const BIA = () => {
           <div className="row mt-4 w-100 d-block d-md-none">
             <MembershipPlansSlider plans={plans} />
           </div>
-        </div>
+        <div ref={membershipRef}></div>
         <button
           key={2}
           className="px-4 py-2 btn btn-light mt-sm-5 border-button becomeAMember"
