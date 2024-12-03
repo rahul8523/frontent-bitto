@@ -24,6 +24,11 @@
   font-weight: normal;
   font-style: normal;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,

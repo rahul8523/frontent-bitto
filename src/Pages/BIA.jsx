@@ -472,64 +472,65 @@ const BIA = () => {
       </section>
 
       <section className="container d-flex flex-column align-items-center py-5 biaPlans">
-        <h4 className="biaHeading text-center">Membership Plans</h4>
-        <h5 className="text-center">
-          Explore our various levels of industry engagement and benefit.
-        </h5>
-        <div className="row mt-4 w-100 d-none d-md-flex">
-          {plans.map((plan, index) => (
-            <div
-              key={index}
-              className={`col-6 col-md-3 biaBorder biaMembershipCard ${
-                plan.isRecommended ? "recommended" : ""
-              }`}
-              style={{ position: "relative" }}
-            >
-              {plan.isRecommended && (
-                <div
-                  className="recommended-label text-white text-center mediumBrownBG"
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    padding: "5px 0",
-                    zIndex: 1,
-                  }}
-                >
-                  Recommended
-                </div>
-              )}
-              <div className="pricingContainer">
-                <div className="text-center pt-5 pricing">
-                  <h3 className="mb-0">{plan.name}</h3>
-                  <h4>
-                    <sup>₹</sup>
-                    <span>{plan.price}</span> /yearly
-                  </h4>
-                </div>
-                {plan.redText && (
-                  <div className="text-danger text-center">
-                    <strong>
-                      <del>₹ 25,000</del>
-                    </strong>
-                    <sub>/mo</sub>
+        <div id="membership-plans" className="w-100">
+          <h4 className="biaHeading text-center">Membership Plans</h4>
+          <h5 className="text-center">
+            Explore our various levels of industry engagement and benefit.
+          </h5>
+          <div className="row mt-4 w-100 d-none d-md-flex">
+            {plans.map((plan, index) => (
+              <div
+                key={index}
+                className={`col-6 col-md-3 biaBorder biaMembershipCard ${
+                  plan.isRecommended ? "recommended" : ""
+                }`}
+                style={{ position: "relative" }}
+              >
+                {plan.isRecommended && (
+                  <div
+                    className="recommended-label text-white text-center mediumBrownBG"
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      padding: "5px 0",
+                      zIndex: 1,
+                    }}
+                  >
+                    Recommended
                   </div>
                 )}
+                <div className="pricingContainer">
+                  <div className="text-center pt-5 pricing">
+                    <h3 className="mb-0">{plan.name}</h3>
+                    <h4>
+                      <sup>₹</sup>
+                      <span>{plan.price}</span> /yearly
+                    </h4>
+                  </div>
+                  {plan.redText && (
+                    <div className="text-danger text-center">
+                      <strong>
+                        <del>₹ 25,000</del>
+                      </strong>
+                      <sub>/mo</sub>
+                    </div>
+                  )}
+                </div>
+                <ul className="p-2 p-md-4">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx}>{feature}</li>
+                  ))}
+                </ul>
+                <button className="pricing-btn">Get Started</button>
               </div>
-              <ul className="p-2 p-md-4">
-                {plan.features.map((feature, idx) => (
-                  <li key={idx}>{feature}</li>
-                ))}
-              </ul>
-              <button className="pricing-btn">Get Started</button>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="row mt-4 w-100 d-block d-md-none">
+            <MembershipPlansSlider plans={plans} />
+          </div>
         </div>
-        <div className="row mt-4 w-100 d-block d-md-none">
-          <MembershipPlansSlider plans={plans} />
-        </div>
-
         <button
           key={2}
           className="px-4 py-2 btn btn-light mt-sm-5 border-button becomeAMember"
