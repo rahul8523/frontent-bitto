@@ -163,6 +163,9 @@ p {
   max-width: 300px;
   line-height: 1.5;
 }
+.pricingContainer{
+  height: 12rem;
+}
 .keyActivityContent h4,
 .biaPlans h5,
 .pricing h3,
@@ -239,14 +242,17 @@ p {
     rgba(0, 0, 0, 0) 75%
   );
   color: white;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
   padding: 1rem;
   box-sizing: border-box;
 }
-
 .position-relative:hover .overlay {
-  opacity: 1;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0) 85%
+  );
 }
 
 .overlay p {
@@ -256,13 +262,12 @@ p {
   margin: 0;
   font-size: 16px;
   font-weight: 500;
-  transition: bottom 0.3s ease-out;
+  transition: bottom 0.5s ease-in-out;
 }
 .position-relative:hover .overlay p {
   bottom: 25px;
 }
-.overlay div {
-  font-size: 16px;
+.position-relative:hover .overlay div {
   font-weight: 500;
 }
 
@@ -306,8 +311,14 @@ p {
   .bia-img h2 {
     font-size: 4rem !important;
   }
+  .biaMembershipCard{
+    min-height: 550px;
+  }
 .biaMembershipCard:hover{
   transform: scale(1);
+}
+.pricingContainer{
+  height: 9rem;
 }
   .w-45 {
     width: 45%;

@@ -44,27 +44,31 @@ const MembershipPlansSlider = ({ plans }) => {
                 Recommended
               </div>
             )}
-
-            <div className={`pricing ${plan.isRecommended ? "pt-5" : "pt-3"}`}>
-              <h3>{plan.name}</h3>
-              <h4>
-                <sup>₹</sup>
-                <span>{plan.price}</span> /yearly
-              </h4>
-            </div>
-            {plan.redText && (
-              <div className="text-danger">
-                <strong>
-                  <del>₹ 25,000</del>
-                </strong>
-                <sub>/mo</sub>
+            <div className="pricingContainer">
+              <div
+                className={`pricing ${plan.isRecommended ? "pt-5" : "pt-3"}`}
+              >
+                <h3>{plan.name}</h3>
+                <h4>
+                  <sup>₹</sup>
+                  <span>{plan.price}</span> /yearly
+                </h4>
               </div>
-            )}
+              {plan.redText && (
+                <div className="text-danger">
+                  <strong>
+                    <del>₹ 25,000</del>
+                  </strong>
+                  <sub>/mo</sub>
+                </div>
+              )}
+            </div>
             <ul className="p-2 p-md-4">
               {plan.features.map((feature, idx) => (
                 <li key={idx}>{feature}</li>
               ))}
             </ul>
+            <button className="pricing-btn">Get Started</button>
           </div>
         </SwiperSlide>
       ))}

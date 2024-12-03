@@ -65,9 +65,9 @@ const BIA = () => {
       [name]: value,
     }));
   };
-const handleFinalSubmit = async () => {
-  console.log(formData);
-};
+  const handleFinalSubmit = async () => {
+    console.log(formData);
+  };
   const content = [
     { imgSrc: biaIcon1, text: "Business Connects & <br> Meets" },
     { imgSrc: biaIcon2, text: "Market & product <br> Acces" },
@@ -232,14 +232,9 @@ const handleFinalSubmit = async () => {
         "Seminars & Workshops",
         "Funding opportunities",
         "Industry Voice",
-        "-",
-        "-",
         "Business Consultations",
-        "-",
-        "-",
-        "-",
       ],
-      redText: true
+      redText: true,
     },
     {
       name: "Silver",
@@ -249,12 +244,8 @@ const handleFinalSubmit = async () => {
         "Seminars & Workshops",
         "Funding opportunities",
         "Industry Voice",
-        "-",
         "VIP Event Invitations",
         "Business Consultations",
-        "-",
-        "-",
-        "-",
       ],
     },
     {
@@ -265,12 +256,10 @@ const handleFinalSubmit = async () => {
         "Seminars & Workshops",
         "Funding opportunities",
         "Industry Voice",
-        "-",
         "VIP Event Invitations",
         "Business Consultations",
         "Policy Advocacy Support",
         "Featured Industry Profile",
-        "-",
       ],
       isRecommended: true,
     },
@@ -511,22 +500,23 @@ const handleFinalSubmit = async () => {
                   Recommended
                 </div>
               )}
-
-              <div className="text-center pt-5 pricing">
-                <h3 className="mb-0">{plan.name}</h3>
-                <h4>
-                  <sup>₹</sup>
-                  <span>{plan.price}</span> /yearly
-                </h4>
-              </div>
-              {plan.redText && (
-                <div className="text-danger text-center">
-                  <strong>
-                    <del>₹ 25,000</del>
-                  </strong>
-                  <sub>/mo</sub>
+              <div className="pricingContainer">
+                <div className="text-center pt-5 pricing">
+                  <h3 className="mb-0">{plan.name}</h3>
+                  <h4>
+                    <sup>₹</sup>
+                    <span>{plan.price}</span> /yearly
+                  </h4>
                 </div>
-              )}
+                {plan.redText && (
+                  <div className="text-danger text-center">
+                    <strong>
+                      <del>₹ 25,000</del>
+                    </strong>
+                    <sub>/mo</sub>
+                  </div>
+                )}
+              </div>
               <ul className="p-2 p-md-4">
                 {plan.features.map((feature, idx) => (
                   <li key={idx}>{feature}</li>
