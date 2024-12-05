@@ -131,7 +131,7 @@ const BIAFooter = () => {
               <p className="address-para">
                 <span>India Corporate office Address :- </span>
                 173, 7th Floor, Tower A, Corenthum, Sector 62, Opp. Electronic
-                City Metro Station, Noida-201309
+                City Metro Station, Noida-201309, India
               </p>
               <p>
                 <span>Phone : </span>
@@ -139,7 +139,7 @@ const BIAFooter = () => {
               </p>
               <p>
                 <span>Global Corporate Office Address :- </span>
-                207 Kent Street, Sydney, NSW, 2000
+                207 Kent Street, Sydney, NSW, 2000, Australia
               </p>
               <p className="email">
                 <span>Email: </span>office@bitoworld.in

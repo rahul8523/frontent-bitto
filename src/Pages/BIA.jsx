@@ -337,6 +337,10 @@ const BIA = () => {
           </div>
           <div className="col-12 col-md-6 my-3 my-md-1 order-1 order-md-2">
             <h3 className="biaHeading">About BIA</h3>
+            <p style={{color: 'gray'}}>
+              BITO Chairman Hon Chirag Paswan addressing diaspora at MCG
+              Australia
+            </p>
             <p>
               The BITO Industries Association is committed to creating
               industrial ecosystem that encourages growth, innovation, Market
