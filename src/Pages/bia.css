@@ -293,6 +293,9 @@ p {
     background: white;
     color: black;
 }
+.biaImgTxt{
+  color: gray;
+}
 @media (min-width: 767px) {
   .borderBottom {
     border-bottom: 1px solid #c19363;
@@ -320,7 +323,10 @@ p {
     padding-top: 280px;
     height: calc(87vh + 170px);
   }
-
+.biaImgTxt{
+  color: gray;
+  font-size: 12px !important;
+}
   .bia-img h2 {
     font-size: 4rem !important;
   }

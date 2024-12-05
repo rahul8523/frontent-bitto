@@ -334,13 +334,13 @@ const BIA = () => {
         <div className="row pb-4 pb-md-1">
           <div className="col-12 col-md-6 order-2 order-md-1">
             <img src={biaAbout} alt="" width="100%" />
-          </div>
-          <div className="col-12 col-md-6 my-3 my-md-1 order-1 order-md-2">
-            <h3 className="biaHeading">About BIA</h3>
-            <p style={{color: 'gray'}}>
+            <p className="mt-2 biaImgTxt">
               BITO Chairman Hon Chirag Paswan addressing diaspora at MCG
               Australia
             </p>
+          </div>
+          <div className="col-12 col-md-6 my-3 my-md-1 order-1 order-md-2">
+            <h3 className="biaHeading">About BIA</h3>
             <p>
               The BITO Industries Association is committed to creating
               industrial ecosystem that encourages growth, innovation, Market
