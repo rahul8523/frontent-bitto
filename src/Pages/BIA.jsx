@@ -1,3 +1,4 @@
+import { Button } from "react-bootstrap";
 import {
   biaAbout,
   biaActivity1,
@@ -41,6 +42,7 @@ import { useState, useEffect, useRef } from "react";
 const BIA = () => {
   const [modalShow, setModalShow] = useState(false);
   const [nextStepModal, setNextStepModal] = useState(false);
+  const [isINR, setIsINR] = useState(true);
   const [formData, setFormData] = useState({
     name: "",
     country: "",
@@ -227,6 +229,7 @@ const BIA = () => {
     {
       name: "Basic",
       price: "15,000",
+      usd: "200",
       features: [
         "Business Meets",
         "Seminars & Workshops",
@@ -239,6 +242,7 @@ const BIA = () => {
     {
       name: "Silver",
       price: "25,000",
+      usd: "300",
       features: [
         "Business Meets",
         "Seminars & Workshops",
@@ -251,6 +255,7 @@ const BIA = () => {
     {
       name: "Gold",
       price: "50,000",
+      usd: "600",
       features: [
         "Business Meets",
         "Seminars & Workshops",
@@ -266,6 +271,7 @@ const BIA = () => {
     {
       name: "Platinum",
       price: "100,000",
+      usd: "1,200",
       features: [
         "Business Meets",
         "Seminars & Workshops",
@@ -284,22 +290,22 @@ const BIA = () => {
   // eslint-disable-next-line no-unused-vars
   const [key, setKey] = useState(0);
 
-const membershipRef = useRef(null);
+  const membershipRef = useRef(null);
 
-// Function to scroll to the pricing section
-const scrollToPricing = () => {
-  if (membershipRef.current) {
-    membershipRef.current.scrollIntoView({ behavior: "smooth" });
-  }
-};
+  // Function to scroll to the pricing section
+  const scrollToPricing = () => {
+    if (membershipRef.current) {
+      membershipRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-// Scroll to the section if there's a hash in the URL (i.e., `#pricing`)
-useEffect(() => {
-  if (window.location.hash === "#membership" && membershipRef.current) {
-    console.log('hi')
-    membershipRef.current.scrollIntoView({ behavior: "smooth" });
-  }
-}, []);
+  // Scroll to the section if there's a hash in the URL (i.e., `#pricing`)
+  useEffect(() => {
+    if (window.location.hash === "#membership" && membershipRef.current) {
+      console.log("hi");
+      membershipRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
 
   return (
     <div>
@@ -482,63 +488,85 @@ useEffect(() => {
         className="container d-flex flex-column align-items-center py-5 biaPlans"
         id="membership"
       >
-          <h4 className="biaHeading text-center">Membership Plans</h4>
-          <h5 className="text-center">
-            Explore our various levels of industry engagement and benefit.
-          </h5>
-          <div className="row mt-4 w-100 d-none d-md-flex">
-            {plans.map((plan, index) => (
-              <div
-                key={index}
-                className={`col-6 col-md-3 biaBorder biaMembershipCard ${
-                  plan.isRecommended ? "recommended" : ""
-                }`}
-                style={{ position: "relative" }}
-              >
-                {plan.isRecommended && (
-                  <div
-                    className="recommended-label text-white text-center mediumBrownBG"
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "100%",
-                      padding: "5px 0",
-                      zIndex: 1,
-                    }}
-                  >
-                    Recommended
-                  </div>
-                )}
-                <div className="pricingContainer">
-                  <div className="text-center pt-5 pricing">
-                    <h3 className="mb-0">{plan.name}</h3>
+        <h4 className="biaHeading text-center">Membership Plans</h4>
+        <h5 className="text-center">
+          Explore our various levels of industry engagement and benefit.
+        </h5>
+        <div className="btn-group biaMembershipBtnGp mt-2">
+          <Button
+            type="button"
+            onClick={() => setIsINR(true)}
+            className={`${isINR ? "active" : "inactive"}`}
+          >
+            INR
+          </Button>
+          <Button
+            type="button"
+            onClick={() => setIsINR(false)}
+            className={`${!isINR ? "active" : "inactive"}`}
+          >
+            USD
+          </Button>
+        </div>
+        <div className="row mt-4 w-100 d-none d-md-flex">
+          {plans.map((plan, index) => (
+            <div
+              key={index}
+              className={`col-6 col-md-3 biaBorder biaMembershipCard ${
+                plan.isRecommended ? "recommended" : ""
+              }`}
+              style={{ position: "relative" }}
+            >
+              {plan.isRecommended && (
+                <div
+                  className="recommended-label text-white text-center mediumBrownBG"
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    padding: "5px 0",
+                    zIndex: 1,
+                  }}
+                >
+                  Recommended
+                </div>
+              )}
+              <div className="pricingContainer">
+                <div className="text-center pt-5 pricing">
+                  <h3 className="mb-0">{plan.name}</h3>
+                  {isINR ? (
                     <h4>
                       <sup>₹</sup>
                       <span>{plan.price}</span> /yearly
                     </h4>
-                  </div>
-                  {plan.redText && (
-                    <div className="text-danger text-center">
-                      <strong>
-                        <del>₹ 25,000</del>
-                      </strong>
-                      <sub>/mo</sub>
-                    </div>
+                  ) : (
+                    <h4>
+                      <span>{plan.usd} USD</span> /yearly
+                    </h4>
                   )}
                 </div>
-                <ul className="p-2 p-md-4">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx}>{feature}</li>
-                  ))}
-                </ul>
-                <button className="pricing-btn">Get Started</button>
+                {plan.redText && (
+                  <div className="text-danger text-center">
+                    <strong>
+                      <del> {isINR ? "₹ 25,000" : "300 USD"}</del>
+                    </strong>
+                    <sub>/mo</sub>
+                  </div>
+                )}
               </div>
-            ))}
-          </div>
-          <div className="row mt-4 w-100 d-block d-md-none">
-            <MembershipPlansSlider plans={plans} />
-          </div>
+              <ul className="p-2 p-md-4">
+                {plan.features.map((feature, idx) => (
+                  <li key={idx}>{feature}</li>
+                ))}
+              </ul>
+              <button className="pricing-btn">Get Started</button>
+            </div>
+          ))}
+        </div>
+        <div className="row mt-4 w-100 d-block d-md-none">
+          <MembershipPlansSlider plans={plans} isINR={isINR} />
+        </div>
         <div ref={membershipRef}></div>
         <button
           key={2}

@@ -4,7 +4,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const MembershipPlansSlider = ({ plans }) => {
+const MembershipPlansSlider = ({ plans, isINR }) => {
   return (
     <Swiper
       speed={1200}
@@ -49,15 +49,21 @@ const MembershipPlansSlider = ({ plans }) => {
                 className={`pricing ${plan.isRecommended ? "pt-5" : "pt-3"}`}
               >
                 <h3>{plan.name}</h3>
-                <h4>
-                  <sup>₹</sup>
-                  <span>{plan.price}</span> /yearly
-                </h4>
+                {isINR ? (
+                  <h4>
+                    <sup>₹</sup>
+                    <span>{plan.price}</span> /yearly
+                  </h4>
+                ) : (
+                  <h4>
+                    <span>{plan.usd} USD</span> /yearly
+                  </h4>
+                )}
               </div>
               {plan.redText && (
                 <div className="text-danger">
                   <strong>
-                    <del>₹ 25,000</del>
+                    <del> {isINR ? '₹ 25,000' : '300 USD'}</del>
                   </strong>
                   <sub>/mo</sub>
                 </div>

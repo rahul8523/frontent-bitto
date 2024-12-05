@@ -285,6 +285,14 @@ p {
   box-shadow: 0px 4px 12px rgba(238, 238, 238, 0.81),
     0px 0px 16px rgba(197, 195, 183, 0.81);
 }
+.btn-group.biaMembershipBtnGp button {
+    background: #af7f4b;
+    border-color: #af7f4b;
+}
+.btn-group.biaMembershipBtnGp button.inactive {
+    background: white;
+    color: black;
+}
 @media (min-width: 767px) {
   .borderBottom {
     border-bottom: 1px solid #c19363;
