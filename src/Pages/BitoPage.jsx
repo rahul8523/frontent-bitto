@@ -1,4 +1,3 @@
-import React from 'react';
 import BitoDriving from './Bito/BitoDriving';
 import Objectives from './Bito/Objectives';
 import KeyActivities from './Bito/KeyActivities';
@@ -20,7 +19,7 @@ const BitoPage = () => {
       <h2 style={{ color: '#fff' }} className='pb-3 text-left membership-heading'>BITO Industries Association <br/>BIA</h2>
     
             <button className="px-4 py-2 btn btn-light mt-sm-5 border-button">
-              BECOME A MEMBER <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              BECOME A MEMBER <i className="fa fa-arrow-right" aria-hidden="true"></i>
             </button>
            
    </div>
