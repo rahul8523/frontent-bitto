@@ -48,7 +48,7 @@ const Header = ({ scrollToSection }) => {
                 Home
               </Nav.Link>
             </Link>
-            <Nav.Link href="https://bitoworld.in/old-site/about.php" className="text-white">About</Nav.Link>
+            <Nav.Link href="/about" className="text-white">About</Nav.Link>
             <Nav.Link href="https://bitoworld.in/old-site/history.php" className="text-white">Our Work</Nav.Link>
             <Nav.Link onClick={scrollToThirtyPercent} className="text-white">Leadership</Nav.Link>
             <Nav.Link href="https://bitoworld.in/old-site/BSIC.php" className="text-white">BSIC</Nav.Link>
