@@ -1,6 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Image, Tab, Tabs } from "react-bootstrap";
-import { aboutUs, biharAsmitaFoundation, curriculum, economics, future, infra, lachhuar, meetup, multiSpecialityHospital, organizationalStructure, socialImpact, spiritual, training } from "../assets/about";
+import {
+  aboutUs,
+  biharAsmitaFoundation,
+  curriculum,
+  economics,
+  future,
+  infra,
+  lachhuar,
+  meetup,
+  multiSpecialityHospital,
+  organizationalStructure,
+  socialImpact,
+  spiritual,
+  training,
+} from "../assets/about";
 import { biaMission, biaVision } from "../assets/bia";
 import MeetOurVisionaryLeader from "../Components/MeetOurVisionaryLeader1";
 import "./about.css";
@@ -374,119 +388,282 @@ const About = () => {
 
 export default About;
 
-
 const OurInitiativeTabs = () => {
   return (
-      <Tabs
-        defaultActiveKey="01"
-        id="our-initiative"
-        className="my-4 border-0"
-      >
-        <Tab eventKey="01" title="01">
-          <div>
-            <div className="row pb-lg-5">
-              <div className="col-12 col-md-6 px-3 px-md-4">
-                <img src={biharAsmitaFoundation} alt="" width="100%" />
-              </div>
-              <div className="col-12 col-md-6 my-3 my-md-1">
-                <h4 className="font-neulis-mdm">
-                  Bihar Asmita Foundation:
-                  <br /> Honoring Heritage, Inspiring Future
-                </h4>
-                <p>
-                  The Bihar Asmita Foundation is at the heart of preserving and
-                  promoting Bihar’s cultural and historical significance.
-                  Through initiatives like the annual{" "}
-                  <strong>Bihar Asmita Diwas</strong>, we unite the global
-                  Bihari community to celebrate achievements and instill pride.
-                </p>
-                <p>
-                  <strong>Preserving Pride:</strong> Highlighting Bihar’s
-                  spiritual, cultural, and historical importance on a global
-                  stage.
-                </p>
-                <p>
-                  <strong>Inspiring Generations:</strong> Honoring excellence to
-                  motivate the youth to contribute to Bihar’s future.
-                </p>
-                <p className="text-brown">
-                  “Our heritage is not just our past; it’s the foundation for a
-                  brighter tomorrow.”
-                </p>
-              </div>
+    <Tabs defaultActiveKey="01" id="our-initiative" className="my-4 border-0">
+      <Tab eventKey="01" title="01">
+        <div>
+          <div className="row pb-lg-5">
+            <div className="col-12 col-md-6 px-3 px-md-4">
+              <img src={biharAsmitaFoundation} alt="" width="100%" />
             </div>
-            <div className="row pt-lg-5 pb-4 pb-md-1">
-              <div className="col-12 col-md-6 my-3 my-md-1">
-                <h3 className="biaHeading">Organizational Structure:</h3>
-                <h4 className="font-neulis-mdm mb-5">
-                  BITO will have a well-defined organizational structure
-                  comprising the following elements:
-                </h4>
-                <p>
-                  <strong>A. Board of Directors:</strong> A group of experienced
-                  and prominent business leaders who will provide strategic
-                  guidance and direction to BITO.
-                </p>
-                <p>
-                  <strong>B. Executive Committee:</strong> Responsible for
-                  day-to-day operations, decision-making, and implementation of
-                  BITO's initiatives.
-                </p>
-                <p>
-                  <strong>C. Sector-Specific Committees:</strong> Specialized
-                  committees focusing on different sectors like agriculture,
-                  manufacturing, IT, healthcare, etc., to address the unique
-                  challenges and opportunities in each sector.
-                </p>
-                <p>
-                  <strong>D. Regional Chapters:</strong> To ensure effective
-                  coordination and representation across different regions of
-                  Bihar and other countries, BITO will establish regional
-                  chapters.
-                </p>
-              </div>
-              <div className="col-12 col-md-6 px-3 px-md-4">
-                <img src={organizationalStructure} alt="" width="100%" />
-              </div>
+            <div className="col-12 col-md-6 my-3 my-md-1">
+              <h4 className="font-neulis-mdm">
+                Bihar Asmita Foundation:
+                <br /> Honoring Heritage, Inspiring Future
+              </h4>
+              <p>
+                The Bihar Asmita Foundation is at the heart of preserving and
+                promoting Bihar’s cultural and historical significance. Through
+                initiatives like the annual <strong>Bihar Asmita Diwas</strong>,
+                we unite the global Bihari community to celebrate achievements
+                and instill pride.
+              </p>
+              <p>
+                <strong>Preserving Pride:</strong> Highlighting Bihar’s
+                spiritual, cultural, and historical importance on a global
+                stage.
+              </p>
+              <p>
+                <strong>Inspiring Generations:</strong> Honoring excellence to
+                motivate the youth to contribute to Bihar’s future.
+              </p>
+              <p className="text-brown">
+                “Our heritage is not just our past; it’s the foundation for a
+                brighter tomorrow.”
+              </p>
             </div>
           </div>
-        </Tab>
-        <Tab eventKey="02" title="02">
-          <div>
-            <h4>02</h4>
-            <p>This is the content for the 02 tab.</p>
+          <div className="row pt-lg-5 pb-4 pb-md-1">
+            <div className="col-12 col-md-6 my-3 my-md-1">
+              <h3 className="biaHeading">Organizational Structure:</h3>
+              <h4 className="font-neulis-mdm mb-5">
+                BITO will have a well-defined organizational structure
+                comprising the following elements:
+              </h4>
+              <p>
+                <strong>A. Board of Directors:</strong> A group of experienced
+                and prominent business leaders who will provide strategic
+                guidance and direction to BITO.
+              </p>
+              <p>
+                <strong>B. Executive Committee:</strong> Responsible for
+                day-to-day operations, decision-making, and implementation of
+                BITO's initiatives.
+              </p>
+              <p>
+                <strong>C. Sector-Specific Committees:</strong> Specialized
+                committees focusing on different sectors like agriculture,
+                manufacturing, IT, healthcare, etc., to address the unique
+                challenges and opportunities in each sector.
+              </p>
+              <p>
+                <strong>D. Regional Chapters:</strong> To ensure effective
+                coordination and representation across different regions of
+                Bihar and other countries, BITO will establish regional
+                chapters.
+              </p>
+            </div>
+            <div className="col-12 col-md-6 px-3 px-md-4">
+              <img src={organizationalStructure} alt="" width="100%" />
+            </div>
           </div>
-        </Tab>
-        <Tab eventKey="03" title="03">
-          <div>
-            <h4>03</h4>
-            <p>This is the content for the 03 tab.</p>
+        </div>
+      </Tab>
+      <Tab eventKey="02" title="02">
+        <div>
+          <div className="row pb-lg-5">
+            <div className="col-12 col-md-6 px-3 px-md-4">
+              <img src={biharAsmitaFoundation} alt="" width="100%" />
+            </div>
+            <div className="col-12 col-md-6 my-3 my-md-1">
+              <h4 className="font-neulis-mdm">
+                BITO Startup Incubation Centre:
+                <br /> Empowering Entrepreneurs
+              </h4>
+              <p>
+                The BITO Startup Incubation Centre (BSIC) is a catalyst for
+                Bihar’s entrepreneurial spirit, driving innovation and economic
+                growth.
+                <strong> Nurturing Startups </strong> Providing mentorship,
+                funding, and networking opportunities to budding entrepreneurs.
+              </p>
+              <p>
+                <strong>job Creation:</strong> Establishing incubation hubs that
+                foster businesses and generate employment.
+              </p>
+              <p>
+                <strong>Global Outreach:</strong> Connecting startups to
+                international markets, making Bihar a hub for innovation.
+              </p>
+              <p className="text-brown">
+                “BSIC turns ideas into enterprises, empowering Biharis to lead
+                the future.”
+              </p>
+            </div>
           </div>
-        </Tab>
-        <Tab eventKey="04" title="04">
-          <div>
-            <h4>04</h4>
-            <p>This is the content for the 04 tab.</p>
+        </div>
+      </Tab>
+      <Tab eventKey="03" title="03">
+        <div>
+          <div className="row pb-lg-5">
+            <div className="col-12 col-md-6 px-3 px-md-4">
+              <img src={biharAsmitaFoundation} alt="" width="100%" />
+            </div>
+            <div className="col-12 col-md-6 my-3 my-md-1">
+              <h4 className="font-neulis-mdm">
+                BITO Industries Association (BIA): :
+                <br /> Driving Industrial Growth
+              </h4>
+              <p>
+                BITO Industries Association (BIA) accelerates sustainable
+                industrial growth , ensuring global competitiveness while
+                promoting eco-friendly practices.
+              </p>
+              <p>
+                <strong>Economic Development:</strong> Attracting investments
+                and forging collaborations between industries and policymakers
+              </p>
+              <p>
+                <strong>Green Practices:</strong> Encouraging sustainability in
+                industrial operations for long-term growth.
+              </p>
+              <p>
+                <strong>Thriving Ecosystem:</strong> Building an industrial base
+                that supports jobs, innovation, and economic prosperity.
+              </p>
+              <p className="text-brown">
+                “BIA is transforming industries into a global benchmark of
+                innovation and sustainability.”
+              </p>
+            </div>
           </div>
-        </Tab>
-        <Tab eventKey="05" title="05">
-          <div>
-            <h4>05</h4>
-            <p>This is the content for the 05 tab.</p>
+        </div>
+      </Tab>
+      <Tab eventKey="04" title="04">
+        <div>
+          <div className="row pb-lg-5">
+            <div className="col-12 col-md-6 px-3 px-md-4">
+              <img src={biharAsmitaFoundation} alt="" width="100%" />
+            </div>
+            <div className="col-12 col-md-6 my-3 my-md-1">
+              <h4 className="font-neulis-mdm">
+                BITO Mart:
+                <br /> Empowering Retailers for a Digital Future
+              </h4>
+              <p>
+                BITO Mart is a no-commission e-commerce platform, empowering
+                small retailers and vendors to succeed without barriers.
+              </p>
+              <p>
+                <strong>Economic Empowerment:</strong>Providing opportunities
+                for small businesses to thrive without intermediaries.
+              </p>
+              <p>
+                <strong>Digital Transformation:</strong> Enabling local
+                retailers to reach customers nationwide and globally. Financial
+                Inclusion: Supporting entrepreneurs with tools and resources to
+                grow in the digital economy.
+              </p>
+              <p className="text-brown">
+                “BITO Mart is not just a platform—it’s a revolution for Bihar’s
+                small businesses.”
+              </p>
+            </div>
           </div>
-        </Tab>
-        <Tab eventKey="06" title="06">
-          <div>
-            <h4>06</h4>
-            <p>This is the content for the 06 tab.</p>
+        </div>
+      </Tab>
+      <Tab eventKey="05" title="05">
+        <div>
+          <div className="row pb-lg-5">
+            <div className="col-12 col-md-6 px-3 px-md-4">
+              <img src={biharAsmitaFoundation} alt="" width="100%" />
+            </div>
+            <div className="col-12 col-md-6 my-3 my-md-1">
+              <h4 className="font-neulis-mdm">
+                BITO Voice:
+                <br /> Telling Bihar’s Stories to the World
+              </h4>
+              <p>
+                BITO Voice is a digital media platform dedicated to celebrating
+                the stories of Biharis who have achieved greatness across the
+                globe. Through inspiring narratives, interviews, and showcases,
+                we aim to uplift Bihar’s image and inspire pride.
+              </p>
+              <p>
+                <strong>Celebrating Achievements:</strong> Highlighting life
+                stories of celebrated Biharis excelling in various fields.
+              </p>
+              <p>
+                <strong>Global Platform:</strong> Bridging the gap between
+                Bihar’s rich heritage and modern success stories.
+              </p>
+              <p className="text-brown">
+                “BITO Voice is where the triumphs of Biharis echo worldwide.”
+              </p>
+            </div>
           </div>
-        </Tab>
-        <Tab eventKey="07" title="07">
-          <div>
-            <h4>07</h4>
-            <p>This is the content for the 07 tab.</p>
+        </div>
+      </Tab>
+      <Tab eventKey="06" title="06">
+        <div>
+          <div className="row pb-lg-5">
+            <div className="col-12 col-md-6 px-3 px-md-4">
+              <img src={biharAsmitaFoundation} alt="" width="100%" />
+            </div>
+            <div className="col-12 col-md-6 my-3 my-md-1">
+              <h4 className="font-neulis-mdm">
+                Tourism and Spirituality:
+                <br /> Celebrating Bihar’s Rich Legacy
+              </h4>
+              <p>
+                Bihar’s iconic spiritual sites, including Nalanda, Vaishali,
+                Bodh Gaya, and Lachhuar, are transformed into global
+                destinations under BITO’s tourism initiatives.
+              </p>
+              <p>
+                <strong>Global Tourism Hub:</strong>Enhancing infrastructure and
+                promoting Bihar’s heritage globally.
+              </p>
+              <p>
+                <strong>Cultural Pride:</strong> Showcasing the spiritual and
+                cultural essence of Bihar.
+              </p>
+              <p>
+                <strong>Economic Impact:</strong> Boosting revenue and creating
+                jobs through heritage tourism.
+              </p>
+              <p className="text-brown">
+                “Every visitor who discovers Bihar’s spiritual legacy carries a
+                piece of its magic with them.”
+              </p>
+            </div>
           </div>
-        </Tab>
-      </Tabs>
+        </div>
+      </Tab>
+      <Tab eventKey="07" title="07">
+        <div>
+          <div className="row pb-lg-5">
+            <div className="col-12 col-md-6 px-3 px-md-4">
+              <img src={biharAsmitaFoundation} alt="" width="100%" />
+            </div>
+            <div className="col-12 col-md-6 my-3 my-md-1">
+              <h4 className="font-neulis-mdm">
+                Global Partnerships and Trade:
+                <br /> Connecting Bihar to the World
+              </h4>
+              <p>
+                BITO establishes strategic collaborations to expand Bihar’s
+                global footprint in trade, investment, and cultural exchange.
+              </p>
+              <p>
+                <strong>Strategic Alliances:</strong>BITO establishes strategic
+                collaborations to expand Bihar’s global footprint in trade,
+                investment, and cultural exchange.
+              </p>
+              <p>
+                <strong>Diaspora Connection:</strong> Mobilizing the global Bihari community through over 25 BITO chapters worldwide.
+              </p>
+              <p>
+                <strong>Economic Leadership:</strong> Positioning Bihar as a key player in the global economy.
+              </p>
+              <p className="text-brown">
+              “Our partnerships aren’t just about commerce; they’re about sharing Bihar’s story with the world.”
+              </p>
+            </div>
+          </div>
+        </div>
+      </Tab>
+    </Tabs>
   );
 };
