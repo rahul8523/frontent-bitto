@@ -209,7 +209,7 @@ const MeetOurVisionaryLeader = (props) => {
       <section className="container py-5">
         {/* DESKTOP DESIGN LAYOUT */}
         <h1 className="text-center section-3-heading d-none d-sm-block pb-5">
-          Meet Our Visionary Leaders
+        Who’s Who
         </h1>
 
         {/* MOBILE DESIGN LAYOUT */}
