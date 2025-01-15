@@ -390,6 +390,7 @@ export default About;
 
 const OurInitiativeTabs = () => {
   return (
+    <>
     <Tabs defaultActiveKey="01" id="our-initiative" className="my-4 border-0">
       <Tab eventKey="01" title="01">
         <div>
@@ -424,40 +425,7 @@ const OurInitiativeTabs = () => {
               </p>
             </div>
           </div>
-          <div className="row pt-lg-5 pb-4 pb-md-1">
-            <div className="col-12 col-md-6 my-3 my-md-1">
-              <h3 className="biaHeading">Organizational Structure:</h3>
-              <h4 className="font-neulis-mdm mb-5">
-                BITO will have a well-defined organizational structure
-                comprising the following elements:
-              </h4>
-              <p>
-                <strong>A. Board of Directors:</strong> A group of experienced
-                and prominent business leaders who will provide strategic
-                guidance and direction to BITO.
-              </p>
-              <p>
-                <strong>B. Executive Committee:</strong> Responsible for
-                day-to-day operations, decision-making, and implementation of
-                BITO's initiatives.
-              </p>
-              <p>
-                <strong>C. Sector-Specific Committees:</strong> Specialized
-                committees focusing on different sectors like agriculture,
-                manufacturing, IT, healthcare, etc., to address the unique
-                challenges and opportunities in each sector.
-              </p>
-              <p>
-                <strong>D. Regional Chapters:</strong> To ensure effective
-                coordination and representation across different regions of
-                Bihar and other countries, BITO will establish regional
-                chapters.
-              </p>
-            </div>
-            <div className="col-12 col-md-6 px-3 px-md-4">
-              <img src={organizationalStructure} alt="" width="100%" />
-            </div>
-          </div>
+       
         </div>
       </Tab>
       <Tab eventKey="02" title="02">
@@ -665,5 +633,43 @@ const OurInitiativeTabs = () => {
         </div>
       </Tab>
     </Tabs>
+
+    
+       <div className="row pt-lg-5 pb-4 pb-md-1">
+            <div className="col-12 col-md-6 my-3 my-md-1">
+              <h3 className="biaHeading">Organizational Structure:</h3>
+              <h4 className="font-neulis-mdm mb-5">
+                BITO will have a well-defined organizational structure
+                comprising the following elements:
+              </h4>
+              <p>
+                <strong>A. Board of Directors:</strong> A group of experienced
+                and prominent business leaders who will provide strategic
+                guidance and direction to BITO.
+              </p>
+              <p>
+                <strong>B. Executive Committee:</strong> Responsible for
+                day-to-day operations, decision-making, and implementation of
+                BITO's initiatives.
+              </p>
+              <p>
+                <strong>C. Sector-Specific Committees:</strong> Specialized
+                committees focusing on different sectors like agriculture,
+                manufacturing, IT, healthcare, etc., to address the unique
+                challenges and opportunities in each sector.
+              </p>
+              <p>
+                <strong>D. Regional Chapters:</strong> To ensure effective
+                coordination and representation across different regions of
+                Bihar and other countries, BITO will establish regional
+                chapters.
+              </p>
+            </div>
+            <div className="col-12 col-md-6 px-3 px-md-4">
+              <img src={organizationalStructure} alt="" width="100%" />
+            </div>
+          </div>
+          
+          </>
   );
 };
