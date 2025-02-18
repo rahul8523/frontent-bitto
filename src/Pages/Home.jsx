@@ -306,7 +306,11 @@ const Home = (props) => {
           {/* Prvin kumar */}
           {/* Pravin Kumar Modal */}
 
-          <Swiper
+
+    {/* team lsioder start here */}
+
+
+         {/*    <Swiper
             spaceBetween={20}
             slidesPerView={2}
             speed={1200}
@@ -327,7 +331,7 @@ const Home = (props) => {
             className="mt-5"
           >
             {/* Slide 1 */}
-            <SwiperSlide>
+            {/*  <SwiperSlide>
               <Col>
                 <div className="president-card-2 premond">
                   <div className="upper-title">
@@ -356,7 +360,7 @@ const Home = (props) => {
             </SwiperSlide>
 
             {/* Slide 2 */}
-            <SwiperSlide>
+            {/*  <SwiperSlide>
               <Col>
                 <div className="president-card premond">
                   <div className="upper-title">
@@ -384,7 +388,7 @@ const Home = (props) => {
             </SwiperSlide>
 
             {/* Slide 3 */}
-            <SwiperSlide>
+            {/*  <SwiperSlide>
               <Col className="d-flex">
                 <div className="president-card-3 premond">
                   <div className="upper-title">
@@ -412,7 +416,7 @@ const Home = (props) => {
               </Col>
             </SwiperSlide>
           </Swiper>
-
+  */}
           {/* New Modal ends here */}
 
           <Modal
@@ -726,11 +730,11 @@ const Home = (props) => {
             </div>
 
           </div>
-          <Link to="https://bitoworld.in/old-site/about.php">
+          <a href="https://bitoworld.in/old-site/about.php">
             <button className=" my-4 section-3-btn px-4 py-2 btn btn-primary">
-              Read More <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              Read More <i className="fa fa-arrow-right" aria-hidden="true"></i>
             </button>
-          </Link>
+          </a>
         </div>
         <div className="w-50 m-auto w-sm-100">
           <Image src={ObjectiveGoals} alt="" className="objective-img" />
@@ -799,11 +803,11 @@ const Home = (props) => {
               </strong>
             </div>
           </div>
-          <Link to="https://bitoworld.in/old-site/about.php">
+          <a href="https://bitoworld.in/old-site/about.php">
             <button className="section-3-btn px-4 py-2 btn btn-primary">
-              Read More <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              Read More <i className="fa fa-arrow-right" aria-hidden="true"></i>
             </button>
-          </Link>
+          </a>
         </Container>
       </div>
 
@@ -864,11 +868,11 @@ const Home = (props) => {
             <strong>BITO Multi Specialty <br/> Hospital</strong>
           </div>
         </div>
-        <Link to="https://bitoworld.in/old-site/about.php">
+        <a href="https://bitoworld.in/old-site/about.php">
           <button className="section-3-btn px-4 py-2 btn btn-primary">
-            Read More <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            Read More <i className="fa fa-arrow-right" aria-hidden="true"></i>
           </button>
-        </Link>
+        </a>
       </Container>
 
       {/* Global Presence Slider */}
