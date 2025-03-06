@@ -68,7 +68,7 @@ const Header = ({ scrollToSection }) => {
 
           {/* Right Nav Links (Desktop Only) */}
           <Nav className="ms-auto d-none d-lg-flex">
-            <Nav.Link href="https://bitoworld.in/old-site/bitoashmita.php" className="text-white">Events</Nav.Link>
+            <Nav.Link href="/events" className="text-white">Events</Nav.Link>
             {/* <Nav.Link href="#media" className="text-white">Media</Nav.Link> */}
             <Nav.Link href="https://bitoworld.in/old-site/career.php" className="text-white">BITO Jobs</Nav.Link>
 
@@ -115,7 +115,7 @@ const Header = ({ scrollToSection }) => {
             <Nav.Link href="https://bitoworld.in/old-site/BSIC.php" className="text-dark" onClick={handleClose}>
               BSIC
             </Nav.Link>
-            <Nav.Link href="https://bitoworld.in/old-site/bitoashmita.php" className="text-dark" onClick={handleClose}>
+            <Nav.Link href="/events" className="text-dark" onClick={handleClose}>
               Events
             </Nav.Link>
             {/* <Nav.Link href="#media" className="text-dark" onClick={handleClose}>
