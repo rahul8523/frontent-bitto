@@ -97,6 +97,9 @@ import uae27 from './assets/events/UAE-event/27.webp'
 import uae28 from './assets/events/UAE-event/28.webp'
 import uae29 from './assets/events/UAE-event/29.webp'
 import uae30 from './assets/events/UAE-event/30.webp'
+import OurWork from './Pages/OurWork'
+import BitoAdvisors from './Pages/BitoAdvisors'
+import ContactUs from './Pages/ContactUs'
 
 
 function slugify(text) {
@@ -108,9 +111,9 @@ const App = () => {
   const events = [
     {
       id: 5,
-      title: "UAE Event",
+      title: "BITO UAE CHAPTER",
       thumbnail: thumbFive,
-      images: [uae1, uae2, uae3, uae4, uae5, uae6, uae7, uae8, uae9, uae10, uae11, uae12, uae13, uae14, uae15, uae16, uae17, uae18, uae19, uae20, uae21, uae22, uae23, uae24, uae25, uae26, uae27, uae28, uae29, uae30],
+      images: [uae22, uae23, uae24, uae25, uae26, uae27, uae28, uae29,uae30, uae1, uae2, uae3, uae4, uae5, uae6, uae7, uae8, uae9, uae10, uae11, uae12, uae13, uae14, uae15, uae16, uae17, uae18, uae19, uae20, uae21, ],
       description: "An exclusive fashion show with top designers.",
     },
     {
@@ -131,16 +134,16 @@ const App = () => {
       id: 3,
       title: "Bihar Gaurav Award 2024",
       thumbnail: thumbThree,
-      images: [gauravEvent1, gauravEvent2, gauravEvent3,gauravEvent4,gauravEvent5,gauravEvent6,gauravEvent7,gauravEvent8,gauravEvent9,gauravEvent10,gauravEvent11,gauravEvent12,gauravEvent13,gauravEvent14,gauravEvent15,gauravEvent16,gauravEvent17,gauravEvent18,gauravEvent19,gauravEvent20,gauravEvent21],
+      images: [gauravEvent1, gauravEvent2, gauravEvent3, gauravEvent4, gauravEvent5, gauravEvent6, gauravEvent7, gauravEvent8, gauravEvent9, gauravEvent10, gauravEvent11, gauravEvent12, gauravEvent13, gauravEvent14, gauravEvent15, gauravEvent16, gauravEvent17, gauravEvent18, gauravEvent19, gauravEvent20, gauravEvent21],
       description: "An exclusive fashion show with top designers.",
     },
     {
       id: 4,
       title: "BITO Singapore Inauguration",
       thumbnail: thumbFour,
-      images: [singaporeEvent1, singaporeEvent2, singaporeEvent3,singaporeEvent4,singaporeEvent5,singaporeEvent6,singaporeEvent7,singaporeEvent8],
+      images: [singaporeEvent1, singaporeEvent2, singaporeEvent3, singaporeEvent4, singaporeEvent5, singaporeEvent6, singaporeEvent7, singaporeEvent8],
       description: "An exclusive fashion show with top designers.",
-    }, 
+    },
   ].map(event => ({ ...event, slug: slugify(event.title) }));
 
   return (
@@ -155,6 +158,9 @@ const App = () => {
           <Route path="/bito" element={<BitoPage />} />
           <Route path="/membership-plans" element={<MembershipPlans />} />
           <Route path="/about" element={<About />} />
+          <Route path="/our-work" element={<OurWork/>}/>
+          <Route path='/contact-us' element={<ContactUs/>} />
+          <Route path='/bito-advisors' element={<BitoAdvisors/>}/>
           {/* Dynamic events page */}
           <Route path='/events' element={<Events events={events} />} />
           <Route path='/events/:slug' element={<EventDetails events={events} />} />

@@ -11,7 +11,7 @@ import Youtube from "../assets/youtube.png";
 
 const Footer = () => {
 
-  
+
   return (
     <>
       <div style={{ backgroundColor: "#f5e0cb" }}>
@@ -61,14 +61,14 @@ const Footer = () => {
               </div>
             </Col>
 
-             <Col className="quick-Home d-sm-block d-none" lg={2} sm={6}>
+            <Col className="quick-Home d-sm-block d-none" lg={2} sm={6}>
               <div className="quick-links">
                 <p style={{ fontSize: '15px', fontWeight: '600' }}>Quick Links</p>
                 <a style={{ textDecoration: 'none', color: 'black' }} href="/">Home</a>
 
                 {/* <li>About</li> */}
-                <a style={{ textDecoration: 'none', color: 'black' }} href="https://bitoworld.in/old-site/history.php"><li>Our Work</li></a>
-                <a style={{ textDecoration: 'none', color: 'black' }} href="https://bitoworld.in/old-site/BSIC.php"><li >BSIC</li></a>
+                <a style={{ textDecoration: 'none', color: 'black' }} href="/our-work"><li>Our Work</li></a>
+                <a style={{ textDecoration: 'none', color: 'black' }} href="https://bitoworld.in/bsic/"><li >BSIC</li></a>
                 {/* <li>Chapter</li>
                 <li>Bihar Voice</li> */}
 
@@ -79,58 +79,58 @@ const Footer = () => {
               className="d-sm-block d-none" lg={2} sm={6}>
               <div className="quick-links-2">
                 {/* <li>EOI for BIA</li> */}
-                
-                <Link style={{ textDecoration: 'none', color: 'black' }} to={'https://bitoworld.in/old-site/bitoashmita.php'}>Events</Link>
+
+                <Link style={{ textDecoration: 'none', color: 'black' }} to={'/events'}>Events</Link>
 
                 {/* <li>Media</li> */}
                 <a style={{ textDecoration: 'none', color: 'black' }} href="https://bitoworld.in/old-site/career.php"><li>Job</li></a>
 
 
+                <a style={{textDecoration:'none',color:'#442c20'}} href="/contact-us"><li>Contact</li></a>
 
-                <li>Contact</li>
                 <a style={{ textDecoration: 'none', color: 'black' }} href="/membership" exact>
-      Membership
-    </a>
+                  Membership
+                </a>
 
               </div>
             </Col>
             {/* MOBILE DEVELOPMENT  */}
-       <div className="d-sm-none d-block mobile-footer">
-        <Row>
-          
-        <Col className="quick-Home w-50" sm={6}>
-              <div className="quick-links">
-                <p style={{ fontSize: '15px', fontWeight: '600' }}>Quick Links</p>
-                <a style={{ textDecoration: 'none', color: 'black' }} href="/">Home</a>
-                {/* <li>About</li> */}
-                <a style={{ textDecoration: 'none', color: 'black' }} href="https://bitoworld.in/old-site/history.php"><li>Our Work</li></a>
-                <a style={{ textDecoration: 'none', color: 'black' }} href="https://bitoworld.in/old-site/BSIC.php"><li >BSIC</li></a>
-                {/* <li>Chapter</li>
+            <div className="d-sm-none d-block mobile-footer">
+              <Row>
+
+                <Col className="quick-Home w-50" sm={6}>
+                  <div className="quick-links">
+                    <p style={{ fontSize: '15px', fontWeight: '600' }}>Quick Links</p>
+                    <a style={{ textDecoration: 'none', color: 'black' }} href="/">Home</a>
+                    {/* <li>About</li> */}
+                    <a style={{ textDecoration: 'none', color: 'black' }} href="https://bitoworld.in/old-site/history.php"><li>Our Work</li></a>
+                    <a style={{ textDecoration: 'none', color: 'black' }} href="https://bitoworld.in/old-site/BSIC.php"><li >BSIC</li></a>
+                    {/* <li>Chapter</li>
                 <li>Bihar Voice</li> */}
 
-              </div>
-            </Col>
+                  </div>
+                </Col>
 
-            <Col
-              className="w-50" sm={6}>
-              <div className="quick-links-2">
-                {/* <li>EOI for BIA</li> */}
+                <Col
+                  className="w-50" sm={6}>
+                  <div className="quick-links-2">
+                    {/* <li>EOI for BIA</li> */}
 
-                <Link style={{ textDecoration: 'none', color: 'black' }} to={'https://bitoworld.in/old-site/bitoashmita.php'}>Events</Link>
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to={'https://bitoworld.in/old-site/bitoashmita.php'}>Events</Link>
 
-                {/* <li>Media</li> */}
-                <a style={{ textDecoration: 'none', color: 'black' }} href="https://bitoworld.in/old-site/career.php"><li>Job</li></a>
+                    {/* <li>Media</li> */}
+                    <a style={{ textDecoration: 'none', color: 'black' }} href="https://bitoworld.in/old-site/career.php"><li>Job</li></a>
 
 
 
-                <li>Contact</li>
-                <a style={{ textDecoration: 'none', color: 'black' }} href={'/membership'}>Membership</a>
+                    <li>Contact</li>
+                    <a style={{ textDecoration: 'none', color: 'black' }} href={'/membership'}>Membership</a>
 
-              </div>
-            </Col>
-        </Row>
-       </div>
-           {/* MOBILE DEVELOPMENT END */}
+                  </div>
+                </Col>
+              </Row>
+            </div>
+            {/* MOBILE DEVELOPMENT END */}
 
 
             <Col className="mopbile-news" lg={4} sm={12}>
@@ -196,12 +196,12 @@ const Footer = () => {
 
         </Container>
         <Container className="py-3 mt-3 copyright">
-            <Col lg={12}>
-              <p className="footer-last-line text-center m-0">
-                Copyright © 2024 Bihar International Trade Organization (BITO)
-              </p>
-            </Col>
-          </Container>
+          <Col lg={12}>
+            <p className="footer-last-line text-center m-0">
+              Copyright © 2025 Bihar International Trade Organization (BITO)
+            </p>
+          </Col>
+        </Container>
       </div>
     </>
   );

@@ -4,23 +4,24 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Bebas Neue Pro Regular";
   src: url("../assets/font/BebasNeueProRegular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Neulis Sans Medium";
-  src: url("../assets/font/fonnts.com-Neulis_Sans_Medium.otf")
-    format("opentype");
+  src: url("../assets/font/fonnts.com-Neulis_Sans_Medium.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Neulis Sans Regular";
-  src: url("../assets/font/fonnts.com-Neulis_Sans_Regular.otf")
-    format("opentype");
+  src: url("../assets/font/fonnts.com-Neulis_Sans_Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -43,18 +44,22 @@ h6 {
   letter-spacing: -1px;
 }
 
-.font-bnpr{
-   font-family: "Bebas Neue Pro Regular", serif !important;
+.font-bnpr {
+  font-family: "Bebas Neue Pro Regular", serif !important;
 }
-.font-neulis{
-    font-family: "Neulis Sans Regular" !important;
+
+.font-neulis {
+  font-family: "Neulis Sans Regular" !important;
 }
-.font-neulis-mdm{
-    font-family: "Neulis Sans Medium" !important;
+
+.font-neulis-mdm {
+  font-family: "Neulis Sans Medium" !important;
 }
-.font-18{
-    font-size: 18px !important;
+
+.font-18 {
+  font-size: 18px !important;
 }
+
 .about-img {
   background-image: url("../assets/about/about.png");
   background-size: cover;
@@ -66,53 +71,70 @@ h6 {
   min-height: 75vh;
 }
 
-.bg-yellow-light{
-    background: #fffbf4;
+.contact-img {
+  background-image: url("../assets/about/contactbanner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 235px;
+  padding-bottom: 50px;
+  margin-top: -170px;
+  min-height: 75vh;
 }
-.bg-brown-dark{
-    background: rgb(66, 42, 29);
+
+.bg-yellow-light {
+  background: #fffbf4;
 }
-.text-brown{
-    color: #b27f4a;
+
+.bg-brown-dark {
+  background: rgb(66, 42, 29);
 }
-#our-initiative li{
-flex-grow: 1;
-margin: 2px;
+
+.text-brown {
+  color: #b27f4a;
 }
-#our-initiative li button{
-    border: none;
-    color: rgb(121,121,121);
-    background-color: rgb(232,232,232);
-    border-radius: 0;
-    padding: 40px;
-    margin: 2px;
-    font-size: 36px;
-    width: 100%;
+
+#our-initiative li {
+  flex-grow: 1;
+  margin: 2px;
 }
-#our-initiative li button.active{
-    color: white !important;
-    background: #c58c4e;
+
+#our-initiative li button {
+  border: none;
+  color: rgb(121, 121, 121);
+  background-color: rgb(232, 232, 232);
+  border-radius: 0;
+  padding: 40px;
+  margin: 2px;
+  font-size: 36px;
+  width: 100%;
+}
+
+#our-initiative li button.active {
+  color: white !important;
+  background: #c58c4e;
 }
 
 .enroll-now-btn {
-    padding: 20px 70px !important;
-    border-radius: 50px;
-    font-size: 30px;
-    background: transparent;
-    border-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+  padding: 20px 70px !important;
+  border-radius: 50px;
+  font-size: 30px;
+  background: transparent;
+  border-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
-.swiper-pagination{
-    position: relative;
-    margin-top: 2rem !important;
+.swiper-pagination {
+  position: relative;
+  margin-top: 2rem !important;
 }
+
 @media (max-width: 767px) {
-    #our-initiative li button{
+  #our-initiative li button {
     font-size: 12px;
     padding: 12px;
-}
+  }
 }
